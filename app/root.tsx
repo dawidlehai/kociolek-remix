@@ -8,6 +8,8 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 
+import { googleFonts, favicons } from "./links";
+
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
   title: "Kociołek – Bufet i kawiarnia w Modraczku",
@@ -20,21 +22,8 @@ export const meta: MetaFunction = () => ({
   },
 });
 
-export const links: LinksFunction = () => [
-  {
-    rel: "preconnect",
-    href: "https://fonts.googleapis.com",
-  },
-  {
-    rel: "preconnect",
-    href: "https://fonts.gstatic.com",
-    crossorigin: "anonymous",
-  },
-  {
-    rel: "stylesheet",
-    href: "https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,700;1,400&display=swap",
-  },
-];
+// @ts-ignore - unknowingly TS marks 'googleFonts' array as problematic
+export const links: LinksFunction = () => [...googleFonts, ...favicons];
 
 export default function App() {
   return (
