@@ -8,7 +8,7 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 
-import { googleFonts, favicons } from "./links";
+import faviconLinks from "./faviconLinks";
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
@@ -22,8 +22,22 @@ export const meta: MetaFunction = () => ({
   },
 });
 
-// @ts-ignore - unknowingly TS marks 'googleFonts' array as problematic
-export const links: LinksFunction = () => [...googleFonts, ...favicons];
+export const links: LinksFunction = () => [
+  {
+    rel: "preconnect",
+    href: "https://fonts.googleapis.com",
+  },
+  {
+    rel: "preconnect",
+    href: "https://fonts.gstatic.com",
+    crossOrigin: "anonymous",
+  },
+  {
+    rel: "stylesheet",
+    href: "https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,700;1,400&display=swap",
+  },
+  ...faviconLinks,
+];
 
 export default function App() {
   return (
