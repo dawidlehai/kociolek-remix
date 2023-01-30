@@ -1,9 +1,14 @@
 import type { LinksFunction } from "@remix-run/node";
 import { Link } from "@remix-run/react";
+
+import type { NavigationLinks } from "../navigation/TopNavigation";
+import TopNavigation, {
+  links as topNavigationLinks,
+} from "../navigation/TopNavigation";
 import Logo from "../svg/Logo";
 import styles from "./Header.css";
 
-export default function Header() {
+export default function Header({ navigationLinks }: NavigationLinks) {
   return (
     <header>
       <div className="header__container">
@@ -13,10 +18,13 @@ export default function Header() {
           title="Powrót do strony głównej">
           <Logo />
         </Link>
-        Header
+        <TopNavigation navigationLinks={navigationLinks} />
       </div>
     </header>
   );
 }
 
-export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];
+export const links: LinksFunction = () => [
+  { rel: "stylesheet", href: styles },
+  ...topNavigationLinks(),
+];

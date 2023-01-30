@@ -1,4 +1,7 @@
 :root {
+  --animation--regular-linear: all 0.2s linear;
+  --animation--regular: all 0.2s ease-in-out;
+
   --border-radius--regular: 13px;
   --border-radius--large: 24px;
 
@@ -78,7 +81,7 @@ html,
 body {
   width: 100%;
   position: relative;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 
 html {
