@@ -8,6 +8,7 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 
+import styles from "~/shared.css";
 import faviconLinks from "./faviconLinks";
 
 export const meta: MetaFunction = () => ({
@@ -23,6 +24,10 @@ export const meta: MetaFunction = () => ({
 });
 
 export const links: LinksFunction = () => [
+  {
+    rel: "stylesheet",
+    href: styles,
+  },
   {
     rel: "preconnect",
     href: "https://fonts.googleapis.com",
