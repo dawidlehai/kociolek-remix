@@ -11,7 +11,7 @@ import styles from "./Header.css";
 export default function Header({ navigationLinks }: NavigationLinks) {
   return (
     <header>
-      <div className="header__container">
+      <div className="header__container container container--max">
         <Link
           to="/"
           className="header__logo-link"

@@ -119,3 +119,17 @@ a:focus {
 ::selection {
   background-color: var(--color--main-2-opaque);
 }
+
+.container {
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+.container--default {
+  max-width: var(--page-width--default);
+}
+.container--wide {
+  max-width: var(--page-width--wide);
+}
+.container--max {
+  max-width: var(--page-width--max);
+}
