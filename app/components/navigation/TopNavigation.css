@@ -24,7 +24,8 @@
 }
 
 @media only screen and (pointer: coarse) {
-  .top-navigation__link:hover {
+  .top-navigation__link:hover,
+  .top-navigation__link:active {
     transform: none;
   }
 }

@@ -98,7 +98,19 @@ body {
   box-sizing: border-box;
 }
 
-*:focus {
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+input:focus,
+textarea:focus,
+button:focus,
+select:focus,
+a:focus {
   outline: none;
   box-shadow: 0 0 0 1rem var(--color--main-2-opaque);
   border-radius: 2px;
