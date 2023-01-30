@@ -7,7 +7,7 @@ export default function Logo() {
       x="0px"
       y="0px"
       viewBox="0 0 1234.6 342.6"
-      enable-background="new 0 0 1234.6 342.6">
+      enableBackground="new 0 0 1234.6 342.6">
       <path
         fill="#4F4F4F"
         d="M320.3,52c1.6,3.6,3.4,7,4.7,10.7c10,26.3,8.6,52-4.4,77c-0.4,0.8-0.9,1.5-1.3,2.2c-1.7-1.4-3.3-2.9-4.6-4.6
