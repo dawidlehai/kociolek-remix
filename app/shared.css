@@ -95,17 +95,6 @@ body {
   box-sizing: border-box;
 }
 
-a:link,
-a:visited {
-  text-decoration: none;
-  color: var(--color--main-4);
-}
-
-a:hover,
-a:active {
-  border-bottom: 2px solid var(--color--main-4);
-}
-
 *:focus {
   outline: none;
   box-shadow: 0 0 0 1rem var(--color--main-2-opaque);
@@ -114,18 +103,4 @@ a:active {
 
 ::selection {
   background-color: var(--color--main-2-opaque);
-}
-
-ul {
-  list-style: none;
-}
-
-img {
-  display: block;
-}
-
-button {
-  background: none;
-  border: none;
-  cursor: pointer;
 }

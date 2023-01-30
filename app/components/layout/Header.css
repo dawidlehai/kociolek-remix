@@ -1,0 +1,13 @@
+.header__container {
+  padding: 3.2rem 4.8rem;
+}
+
+.header__logo-link {
+  max-width: 24rem;
+  display: block;
+  box-shadow: none;
+}
+
+.header__logo-link svg {
+  display: block;
+}
