@@ -13,7 +13,7 @@ import faviconLinks from "./faviconLinks";
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
-  title: "Kociołek – Bufet i kawiarnia w Modraczku",
+  title: "Kociołek – Bufet w Modraczku",
   description:
     "Kociołek to bufet i kawiarnia umieszczona na pierwszym piętrze Domu Kultury “Modraczek”, na Wyżynach w Bydgoszczy. Jest to wspaniałe miejsce spotkań, w którym możesz zorganizować dowolną imprezę okolicznościową wraz z profesjonalną obsługą cateringową, zjeść pyszne posiłki obiadowe, a także zamówić wybrane potrawy i dania garmażeryjne na wynos.",
   viewport: "width=device-width,initial-scale=1",
