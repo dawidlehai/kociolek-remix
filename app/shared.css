@@ -120,6 +120,10 @@ a:focus {
   background-color: var(--color--main-2-opaque);
 }
 
+.background--main {
+  background-color: var(--color--main-0);
+}
+
 .container {
   margin: 0 auto;
   padding: 0 3.2rem;
@@ -132,4 +136,10 @@ a:focus {
 }
 .container--max {
   max-width: var(--page-width--max);
+}
+
+@media screen and (max-width: 83.25em /* 1332px */) {
+  .container--max {
+    max-width: var(--page-width--wide);
+  }
 }

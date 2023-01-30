@@ -8,9 +8,13 @@ import TopNavigation, {
 import Logo from "../svg/Logo";
 import styles from "./Header.css";
 
-export default function Header({ navigationLinks }: NavigationLinks) {
+interface Props extends NavigationLinks {
+  sticky: boolean;
+}
+
+export default function Header({ navigationLinks, sticky }: Props) {
   return (
-    <header>
+    <header className={`header background--main ${sticky && "header--sticky"}`}>
       <div className="header__container container container--max">
         <Link
           to="/"

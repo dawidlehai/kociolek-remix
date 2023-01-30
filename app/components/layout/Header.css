@@ -15,3 +15,34 @@
   display: block;
   width: 100%;
 }
+
+.header--sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(7px);
+  box-shadow: var(--shadow--light);
+  animation: 0.4s animateHeader ease-in-out;
+}
+
+.header--sticky .header__container {
+  padding: 1.6rem 4.8rem;
+  align-items: center;
+}
+
+.header--sticky .header__logo {
+  max-width: 16rem;
+}
+
+@media screen and (max-width: 83.25em /* 1332px */) {
+  .header__container {
+    padding: 3.2rem 3.2rem;
+  }
+
+  .header--sticky .header__container {
+    padding: 1.6rem 3.2rem;
+    max-width: var(--page-width--default);
+  }
+}
