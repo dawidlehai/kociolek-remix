@@ -1,6 +1,6 @@
 import type { LinksFunction } from "@remix-run/node";
 import { Outlet, useOutletContext } from "@remix-run/react";
-import React from "react";
+import React, { useRef } from "react";
 
 import type { optionsType } from "~/hooks/useObserver";
 import useObserver from "~/hooks/useObserver";
@@ -26,11 +26,22 @@ const options: optionsType = {
 
 export default function Layout() {
   const [containerRef, isVisible] = useObserver(options);
+  const headerRef = useRef<HTMLElement>(null);
+
+  let headerHeight = 0;
+  if (headerRef.current)
+    headerHeight = headerRef.current.getBoundingClientRect().height;
 
   return (
     <>
-      <Header navigationLinks={navigationLinks} sticky={!isVisible} />
-      <main className="main">
+      <Header
+        navigationLinks={navigationLinks}
+        sticky={!isVisible}
+        headerRef={headerRef}
+      />
+      <main
+        className="main"
+        style={{ marginTop: !isVisible ? `${headerHeight}px` : "0" }}>
         {isVisible ? "IN VIEWPORT" : "NOT IN VIEWPORT"}
         <Outlet context={{ observeRef: containerRef }} />
       </main>

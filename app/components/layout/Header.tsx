@@ -12,15 +12,24 @@ import styles from "./Header.css";
 
 interface Props extends NavigationLinks {
   sticky: boolean;
+  headerRef: React.RefObject<HTMLElement>;
 }
 
-export default function Header({ navigationLinks, sticky }: Props) {
+export default function Header({ navigationLinks, sticky, headerRef }: Props) {
   const [showMenu, setShowMenu] = useState(false);
+  const [hideWithDelay, setHideWithDelay] = useState(false);
 
   const toggleMenuHandler = () => setShowMenu((prevState) => !prevState);
 
+  if (sticky)
+    setTimeout(() => {
+      setHideWithDelay(true);
+    }, 300);
+
   return (
-    <header className={`header background--main ${sticky && "header--sticky"}`}>
+    <header
+      className={`header background--main ${sticky && "header--sticky"}`}
+      ref={headerRef}>
       <div className="header__container container container--max">
         <Link
           to="/"
