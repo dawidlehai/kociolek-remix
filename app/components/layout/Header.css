@@ -36,6 +36,14 @@
   max-width: 16rem;
 }
 
+.menu-button {
+  font-size: var(--font-size--very-large);
+  color: var(--color--grey-2);
+  line-height: 0;
+  display: none;
+  z-index: 210;
+}
+
 @media screen and (max-width: 83.25em /* 1332px */) {
   .header__container {
     padding: 3.2rem 3.2rem;
@@ -44,6 +52,12 @@
   .header--sticky .header__container {
     padding: 1.6rem 3.2rem;
     max-width: var(--page-width--default);
+  }
+}
+
+@media screen and (max-width: 55em /* 880px */) {
+  .menu-button {
+    display: block;
   }
 }
 
