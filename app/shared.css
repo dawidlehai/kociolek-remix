@@ -144,32 +144,32 @@ button {
   max-width: var(--page-width--max);
 }
 
-@media screen and (max-width: 83.25em /* 1332px */) {
+@media only screen and (max-width: 83.25em /* 1332px */) {
   .container--max {
     max-width: var(--page-width--wide);
   }
 }
 
-@media screen and (max-width: 67em /* 1072px */) {
+@media only screen and (max-width: 67em /* 1072px */) {
   html {
     font-size: 56.25%;
   }
 }
 
-@media screen and (max-width: 35.75em /* 572px */) {
+@media only screen and (max-width: 35.75em /* 572px */) {
   html {
     font-size: 50%;
   }
 }
 
-@media screen and (max-width: 31.75em /* 508px */) {
+@media only screen and (max-width: 31.75em /* 508px */) {
   .container {
     padding-left: 2.4rem;
     padding-right: 2.4rem;
   }
 }
 
-@media screen and (max-width: 19.25em /* 308px */) {
+@media only screen and (max-width: 19.25em /* 308px */) {
   html {
     font-size: 43.75%;
   }
