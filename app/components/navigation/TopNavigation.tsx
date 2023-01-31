@@ -33,10 +33,9 @@ export default function TopNavigation({
   return (
     <nav className="top-navigation">
       <ul
-        className={isHidden ? "" : "display-menu"}
-        style={{
-          transform: showMobileMenu ? "translateX(0)" : "translateX(100%)",
-        }}>
+        className={`${!showMobileMenu && "hide-menu"} ${
+          !isHidden && "display-menu"
+        }`}>
         {navigationLinks.map((link) => (
           <li key={link.label}>
             <Link

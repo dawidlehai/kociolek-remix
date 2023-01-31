@@ -56,6 +56,10 @@
     display: flex;
   }
 
+  .top-navigation ul.hide-menu {
+    transform: translateX(100%);
+  }
+
   .top-navigation__link:hover,
   .top-navigation__link:active {
     transform: none;
