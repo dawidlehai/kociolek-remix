@@ -2,18 +2,25 @@ import type { LinksFunction } from "@remix-run/node";
 import { Link } from "@remix-run/react";
 import styles from "./TopNavigation.css";
 
-export type NavigationLinks = {
+export interface NavigationLinks {
   navigationLinks: {
     label: string;
     href: string;
     highlight?: boolean;
   }[];
-};
+}
 
-export default function TopNavigation({ navigationLinks }: NavigationLinks) {
+interface Props extends NavigationLinks {
+  showMobileMenu: boolean;
+}
+
+export default function TopNavigation({
+  navigationLinks,
+  showMobileMenu,
+}: Props) {
   return (
     <nav className="top-navigation">
-      <ul>
+      <ul className={showMobileMenu ? "display-menu" : ""}>
         {navigationLinks.map((link) => (
           <li key={link.label}>
             <Link

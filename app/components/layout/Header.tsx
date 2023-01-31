@@ -28,7 +28,10 @@ export default function Header({ navigationLinks, sticky }: Props) {
           title="Powrót do strony głównej">
           <Logo />
         </Link>
-        {showMenu && <TopNavigation navigationLinks={navigationLinks} />}
+        <TopNavigation
+          navigationLinks={navigationLinks}
+          showMobileMenu={showMenu}
+        />
         <MenuButton
           ariaLabel={showMenu ? "Zamknij menu" : "Otwórz menu"}
           className="menu-button"
