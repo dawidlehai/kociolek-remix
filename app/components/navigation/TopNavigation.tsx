@@ -1,5 +1,7 @@
 import type { LinksFunction } from "@remix-run/node";
 import { Link } from "@remix-run/react";
+import { useState, useEffect } from "react";
+
 import styles from "./TopNavigation.css";
 
 export interface NavigationLinks {
@@ -18,9 +20,23 @@ export default function TopNavigation({
   navigationLinks,
   showMobileMenu,
 }: Props) {
+  const [isHidden, setIsHidden] = useState(true);
+
+  useEffect(() => {
+    if (!showMobileMenu)
+      setTimeout(() => {
+        setIsHidden(true);
+      }, 300);
+    if (showMobileMenu) setIsHidden(false);
+  }, [showMobileMenu]);
+
   return (
     <nav className="top-navigation">
-      <ul className={showMobileMenu ? "display-menu" : ""}>
+      <ul
+        className={isHidden ? "" : "display-menu"}
+        style={{
+          transform: showMobileMenu ? "translateX(0)" : "translateX(100%)",
+        }}>
         {navigationLinks.map((link) => (
           <li key={link.label}>
             <Link

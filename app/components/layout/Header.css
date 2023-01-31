@@ -44,6 +44,14 @@
   z-index: 210;
 }
 
+.menu-button--close {
+  animation: 0.5s rotate ease-out;
+}
+
+.menu-button--open {
+  animation: 0.3s resize ease-in;
+}
+
 @media only screen and (max-width: 83.25em /* 1332px */) {
   .header__container {
     padding: 3.2rem 3.2rem;
@@ -67,5 +75,26 @@
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes resize {
+  from {
+    transform: scale(0);
+  }
+  70% {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
   }
 }

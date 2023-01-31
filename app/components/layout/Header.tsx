@@ -34,7 +34,9 @@ export default function Header({ navigationLinks, sticky }: Props) {
         />
         <MenuButton
           ariaLabel={showMenu ? "Zamknij menu" : "Otwórz menu"}
-          className="menu-button"
+          className={`menu-button ${
+            showMenu ? "menu-button--close" : "menu-button--open"
+          }`}
           type={showMenu ? "close" : "open"}
           onClick={toggleMenuHandler}
         />
