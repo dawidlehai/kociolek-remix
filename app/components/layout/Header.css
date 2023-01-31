@@ -36,6 +36,11 @@
   max-width: 16rem;
 }
 
+.header--sticky .button:link::before,
+.header--sticky .button:visited::before {
+  background-color: var(--color--main-0);
+}
+
 .menu-button {
   font-size: var(--font-size--very-large);
   color: var(--color--grey-2);
