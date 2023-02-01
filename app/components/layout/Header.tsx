@@ -22,11 +22,11 @@ export default function Header({ navigationLinks, sticky, headerRef }: Props) {
 
   return (
     <header
-      className={`header background--main ${sticky && "header--sticky"}`}
+      className={`header background--main ${sticky ? "header--sticky" : ""}`}
       ref={headerRef}>
       <div className="header__container container container--max">
         <Link
-          to="/"
+          to="/#top"
           className="header__logo-link"
           title="Powrót do strony głównej">
           <Logo />

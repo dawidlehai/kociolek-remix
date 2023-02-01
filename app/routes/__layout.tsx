@@ -1,22 +1,24 @@
 import type { LinksFunction } from "@remix-run/node";
+import type { RefObject } from "react";
 import { Outlet, useOutletContext } from "@remix-run/react";
 import React, { useRef } from "react";
 
 import type { optionsType } from "~/hooks/useObserver";
 import useObserver from "~/hooks/useObserver";
 import styles from "~/styles/main.css";
+import { links as sectionLinks } from "~/components/layout/Section";
 import Header, { links as headerLinks } from "~/components/layout/Header";
 import Footer, { links as footerLinks } from "~/components/layout/Footer";
 
 const navigationLinks = [
-  { label: "Na miejscu", href: "#na-miejscu" },
-  { label: "Na wynos", href: "#na-wynos" },
-  { label: "Menu", href: "#menu" },
-  { label: "O nas", href: "#o-nas" },
-  { label: "Kontakt", href: "#kontakt", highlight: true },
+  { label: "Na miejscu", href: "/#na-miejscu" },
+  { label: "Na wynos", href: "/#na-wynos" },
+  { label: "Menu", href: "/#menu" },
+  { label: "O nas", href: "/#o-nas" },
+  { label: "Kontakt", href: "/#kontakt", highlight: true },
 ];
 
-type ContextType = { observeRef: React.MutableRefObject<null> };
+type ContextType = { observeRef: RefObject<HTMLElement> };
 
 const options: optionsType = {
   root: null,
@@ -53,6 +55,7 @@ export default function Layout() {
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: styles },
   ...headerLinks(),
+  ...sectionLinks(),
   ...footerLinks(),
 ];
 

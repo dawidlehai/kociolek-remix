@@ -11,6 +11,11 @@
   margin-right: 4.8rem;
 }
 
+.header__logo-link:hover,
+.header__logo-link:active {
+  border: none;
+}
+
 .header__logo-link svg {
   display: block;
   width: 100%;
@@ -71,6 +76,15 @@
 @media only screen and (max-width: 55em /* 880px */) {
   .menu-button {
     display: block;
+  }
+}
+
+@media only screen and (max-width: 31.75em /* 508px */) {
+  .header--sticky .header__container {
+    padding: 1.6rem 2.4rem;
+  }
+  .header__container {
+    padding: 3.2rem 2.4rem;
   }
 }
 

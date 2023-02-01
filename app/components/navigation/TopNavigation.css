@@ -15,6 +15,10 @@
   transition: var(--animation--regular-linear);
 }
 
+.button.top-navigation__link {
+  color: var(--color--grey-2);
+}
+
 .top-navigation__link:hover {
   transform: translateY(-5%);
   border: none;
