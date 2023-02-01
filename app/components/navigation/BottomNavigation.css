@@ -14,7 +14,7 @@
 }
 
 .footer-navigation__link:hover,
-.footer-navigation__link:focus {
+.footer-navigation__link:focus-visible {
   transform: translateY(-5%);
   border: none;
   box-shadow: 4rem 1rem 0 var(--color--shade-1),

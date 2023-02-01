@@ -17,10 +17,12 @@
 
 .top-navigation__link:hover {
   transform: translateY(-5%);
+  border: none;
 }
 
 .top-navigation__link:active {
   transform: translateY(5%);
+  border: none;
 }
 
 @media only screen and (pointer: coarse) {
