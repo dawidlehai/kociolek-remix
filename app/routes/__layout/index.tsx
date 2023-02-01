@@ -5,6 +5,7 @@ import Section from "~/components/layout/Section";
 import Hero, { links as heroLinks } from "~/components/home/Hero";
 import Offer, { links as offerLinks } from "~/components/home/Offer";
 import Takeaway, { links as takeawayLinks } from "~/components/home/Takeaway";
+import Menu, { links as menuLinks } from "~/components/home/Menu";
 
 export default function Index() {
   const { observeRef } = useObserveRef();
@@ -32,6 +33,12 @@ export default function Index() {
         id="na-wynos">
         <Takeaway />
       </Section>
+      <Section
+        sectionClass="menu vertical-padding--large"
+        containerClass="menu__container grid grid--2-columns grid--gap-medium"
+        id="menu">
+        <Menu />
+      </Section>
     </>
   );
 }
@@ -40,4 +47,5 @@ export const links: LinksFunction = () => [
   ...heroLinks(),
   ...offerLinks(),
   ...takeawayLinks(),
+  ...menuLinks(),
 ];
