@@ -5,3 +5,7 @@ export interface NavigationLinks {
     highlight?: boolean;
   }[];
 }
+
+export interface SvgProps {
+  className?: string;
+}

@@ -6,6 +6,8 @@ import Hero, { links as heroLinks } from "~/components/home/Hero";
 import Offer, { links as offerLinks } from "~/components/home/Offer";
 import Takeaway, { links as takeawayLinks } from "~/components/home/Takeaway";
 import Menu, { links as menuLinks } from "~/components/home/Menu";
+import About, { links as aboutLinks } from "~/components/home/About";
+import Contact, { links as contactLinks } from "~/components/home/Contact";
 
 export default function Index() {
   const { observeRef } = useObserveRef();
@@ -39,6 +41,18 @@ export default function Index() {
         id="menu">
         <Menu />
       </Section>
+      <Section
+        sectionClass="about vertical-padding--large"
+        containerClass="about__container grid grid--2-columns grid--gap-medium"
+        id="o-nas">
+        <About />
+      </Section>
+      <Section
+        sectionClass="contact vertical-padding--large curve curve--bottom curve--bottom-shadow-line curve--bottom-shadow-line-gradient-all"
+        containerClass="contact__container grid grid--2-columns"
+        id="kontakt">
+        <Contact />
+      </Section>
     </>
   );
 }
@@ -48,4 +62,6 @@ export const links: LinksFunction = () => [
   ...offerLinks(),
   ...takeawayLinks(),
   ...menuLinks(),
+  ...aboutLinks(),
+  ...contactLinks(),
 ];

@@ -1,6 +1,9 @@
-export default function Logo() {
+import type { SvgProps } from "~/types/types";
+
+export default function Logo({ className }: SvgProps) {
   return (
     <svg
+      className={className || ""}
       version="1.1"
       id="logo-svg"
       xmlns="http://www.w3.org/2000/svg"
