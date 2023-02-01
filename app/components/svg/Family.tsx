@@ -13,6 +13,9 @@ export default function Family({ className }: SvgProps) {
       viewBox="0 0 3804.2639 2300.0662"
       enableBackground="new 0 0 5000 3500"
       xmlns="http://www.w3.org/2000/svg">
+      <title>
+        Grafika rodziny zasiadającej przy wspólnym stoliku do posiłku.
+      </title>
       <defs id="defs488"></defs>
       <g id="SOFA" transform="translate(-597.868,-658.72932)">
         <path

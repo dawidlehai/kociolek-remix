@@ -9,6 +9,7 @@ export default function Cafeteria() {
       viewBox="0 0 3662.4568 2951.354"
       enableBackground="new 0 0 5000 3500"
       xmlns="http://www.w3.org/2000/svg">
+      <title>Grafika przedstawiająca kawiarnię.</title>
       <defs id="defs638"></defs>
       <g id="g629" transform="translate(-617.522,-274.323)">
         <g id="WALL">

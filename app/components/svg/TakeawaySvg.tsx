@@ -10,6 +10,9 @@ export default function TakeawaySvg() {
       viewBox="0 0 3987.5801 1998.5959"
       enableBackground="new 0 0 5000 3500"
       xmlns="http://www.w3.org/2000/svg">
+      <title>
+        Zapakowane produkty na wynos, pączki, kawa, sałatki i lemoniada
+      </title>
       <defs id="defs568"></defs>
       <g id="DRINK_1_" transform="translate(-507.45999,-751.95)">
         <polygon
