@@ -1,7 +1,7 @@
 import type { LinksFunction } from "@remix-run/node";
 import type { RefObject } from "react";
 import { Outlet, useOutletContext } from "@remix-run/react";
-import React, { useRef } from "react";
+import { useRef } from "react";
 
 import type { optionsType } from "~/hooks/useObserver";
 import useObserver from "~/hooks/useObserver";
