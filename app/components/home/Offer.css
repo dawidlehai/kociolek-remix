@@ -37,6 +37,8 @@
 .offer__features {
   margin-top: 3.2rem;
   display: flex;
+  gap: clamp(1.6rem, 3vw, 3.2rem);
+  row-gap: clamp(2.4rem, 4vw, 4.8rem);
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -127,7 +129,7 @@
         rgba(255, 255, 255, 0) 50%,
         var(--color--accent-primary-0) 80%
       ),
-      center / cover url("../img/wedding.jpg");
+      center / cover url("/img/wedding.jpg");
   }
 }
 

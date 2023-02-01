@@ -199,6 +199,14 @@ button {
   border: none;
 }
 
+.subheading {
+  font-weight: var(--font-weight--medium);
+  font-size: var(--font-size--small);
+  letter-spacing: var(--letter-spacing--larger);
+  text-transform: uppercase;
+  color: var(--color--main-4);
+}
+
 .heading-primary {
   color: var(--color--shade-3);
   font-size: var(--font-size--huge);

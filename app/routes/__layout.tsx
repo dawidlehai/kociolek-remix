@@ -5,7 +5,6 @@ import { useRef } from "react";
 
 import type { optionsType } from "~/hooks/useObserver";
 import useObserver from "~/hooks/useObserver";
-import styles from "~/styles/main.css";
 import Header, { links as headerLinks } from "~/components/layout/Header";
 import Footer, { links as footerLinks } from "~/components/layout/Footer";
 
@@ -50,10 +49,6 @@ export default function Layout() {
   );
 }
 
-export const links: LinksFunction = () => [
-  { rel: "stylesheet", href: styles },
-  ...headerLinks(),
-  ...footerLinks(),
-];
+export const links: LinksFunction = () => [...headerLinks(), ...footerLinks()];
 
 export const useObserveRef = () => useOutletContext<ContextType>();
