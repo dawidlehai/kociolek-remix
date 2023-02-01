@@ -8,7 +8,7 @@ export type optionsType = {
 
 const useObserver = (options: optionsType) => {
   const containerRef = useRef<HTMLElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
 
   const callbackFunction: IntersectionObserverCallback = (entries) => {
     const [entry] = entries;

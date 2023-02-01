@@ -17,7 +17,6 @@ interface Props extends NavigationLinks {
 
 export default function Header({ navigationLinks, sticky, headerRef }: Props) {
   const [showMenu, setShowMenu] = useState(false);
-
   const toggleMenuHandler = () => setShowMenu((prevState) => !prevState);
 
   return (
