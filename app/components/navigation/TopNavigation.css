@@ -52,6 +52,16 @@
     font-size: var(--font-size--regular-large);
   }
 
+  .top-navigation .button:link::before,
+  .top-navigation .button:visited::before {
+    background-color: var(--color--main-0);
+  }
+
+  .top-navigation .button:hover,
+  .top-navigation .button:active {
+    box-shadow: none;
+  }
+
   .top-navigation ul.display-menu {
     display: flex;
   }
