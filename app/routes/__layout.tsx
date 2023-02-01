@@ -44,7 +44,6 @@ export default function Layout() {
       <main
         className="main"
         style={{ marginTop: !isVisible ? `${headerHeight}px` : "0" }}>
-        {isVisible ? "IN VIEWPORT" : "NOT IN VIEWPORT"}
         <Outlet context={{ observeRef: containerRef }} />
       </main>
       <Footer navigationLinks={navigationLinks} />

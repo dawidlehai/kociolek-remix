@@ -1,0 +1,15 @@
+.hero .section__container {
+  padding-top: 3.2rem;
+  padding-bottom: 6.4rem;
+}
+.hero__description {
+  margin-top: 3.2rem;
+  margin-bottom: 4.8rem;
+}
+.hero__button--contact {
+  margin-right: 1.6rem;
+}
+
+.hero__button--more svg {
+  transform: translate(15%, 15%);
+}

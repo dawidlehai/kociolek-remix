@@ -1,5 +1,8 @@
+import type { LinksFunction } from "@remix-run/node";
+
 import { useObserveRef } from "~/routes/__layout";
 import Section from "~/components/layout/Section";
+import Hero, { links as heroLinks } from "~/components/home/Hero";
 
 export default function Index() {
   const { observeRef } = useObserveRef(); // set observeRef for hero section
@@ -12,8 +15,10 @@ export default function Index() {
         background="main"
         id="hero"
         observeRef={observeRef}>
-        Hero
+        <Hero />
       </Section>
     </>
   );
 }
+
+export const links: LinksFunction = () => [...heroLinks()];

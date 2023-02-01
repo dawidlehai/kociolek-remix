@@ -191,6 +191,48 @@ button {
   border: none;
 }
 
+.heading-primary {
+  color: var(--color--shade-3);
+  font-size: var(--font-size--huge);
+  line-height: var(--line-height--small);
+  letter-spacing: var(--letter-spacing--much-smaller);
+}
+.heading-secondary {
+  color: var(--color--shade-3);
+  font-size: var(--font-size--very-large);
+  line-height: var(--line-height--medium);
+  letter-spacing: var(--letter-spacing--smaller);
+}
+.heading-tertiary {
+  color: var(--color--shade-2);
+  font-size: var(--font-size--large);
+  line-height: var(--line-height--medium-large);
+}
+
+.highlight {
+  position: relative;
+  z-index: 0;
+}
+.highlight::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: skewX(-15deg);
+  z-index: -1;
+}
+.highlight--accent-primary::before {
+  background-color: var(--color--accent-primary-0);
+}
+.highlight--accent-secondary::before {
+  background-color: var(--color--accent-secondary-0);
+}
+.highlight--main::before {
+  background-color: var(--color--main-2);
+}
+
 .background--main {
   background-color: var(--color--main-0);
 }
