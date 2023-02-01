@@ -3,9 +3,10 @@ import type { LinksFunction } from "@remix-run/node";
 import { useObserveRef } from "~/routes/__layout";
 import Section from "~/components/layout/Section";
 import Hero, { links as heroLinks } from "~/components/home/Hero";
+import Offer, { links as offerLinks } from "~/components/home/Offer";
 
 export default function Index() {
-  const { observeRef } = useObserveRef(); // set observeRef for hero section
+  const { observeRef } = useObserveRef();
 
   return (
     <>
@@ -18,8 +19,14 @@ export default function Index() {
         observeRef={observeRef}>
         <Hero />
       </Section>
+      <Section
+        sectionClass="offer"
+        containerClass="grid grid--gap-medium vertical-padding--large"
+        id="na-miejscu">
+        <Offer />
+      </Section>
     </>
   );
 }
 
-export const links: LinksFunction = () => [...heroLinks()];
+export const links: LinksFunction = () => [...heroLinks(), ...offerLinks()];

@@ -1,0 +1,139 @@
+.offer {
+  background: linear-gradient(
+      297deg,
+      rgba(0, 0, 0, 0) 30%,
+      var(--color--shade-3) 84%
+    ),
+    linear-gradient(322deg, var(--color--main-3) 0%, rgba(255, 255, 255, 0) 20%),
+    linear-gradient(
+      50deg,
+      rgba(255, 255, 255, 0) 70%,
+      var(--color--accent-secondary-0) 100%
+    ),
+    linear-gradient(
+      200deg,
+      rgba(255, 255, 255, 0) 50%,
+      var(--color--accent-primary-0) 80%
+    ),
+    center / cover url("/img/wedding.jpg");
+  color: var(--color--white);
+  text-shadow: var(--shadow--strong);
+}
+
+.offer .section__container {
+  padding-top: 16rem;
+  padding-bottom: 12.8rem;
+  grid-template-columns: 55fr 45fr;
+}
+
+.offer__subheading {
+  color: var(--color--main-0);
+}
+
+.offer__heading {
+  color: var(--color--main-2);
+}
+
+.offer__features {
+  margin-top: 3.2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.offer__features li {
+  --square-size: 13.25rem;
+  flex: 1 1 13.25rem;
+  max-width: 15rem;
+  transition: 0.5s all;
+}
+
+.offer__features li i {
+  height: var(--square-size);
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  font-size: 4.8rem;
+  color: var(--color--shade-2);
+  text-shadow: none;
+  background-color: var(--color--white);
+  border: 1px solid var(--color--shade-1);
+  box-shadow: var(--shadow--regular), var(--effect--duo-tone-shadow),
+    var(--effect--out-of-lines-inset) var(--color--accent-primary-0);
+  border-radius: var(--border-radius--regular);
+  background: linear-gradient(
+      322deg,
+      var(--color--main-2-opaque) 0%,
+      rgba(255, 255, 255, 0) 40%
+    ),
+    linear-gradient(
+      50deg,
+      rgba(255, 255, 255, 0) 70%,
+      rgba(169, 216, 213, 0.5) 100%
+    ),
+    linear-gradient(
+      200deg,
+      rgba(255, 255, 255, 0) 50%,
+      rgba(246, 172, 193, 0.5) 80%
+    ),
+    #fff;
+}
+
+.offer__features li span {
+  display: block;
+  margin-top: 1.6rem;
+  line-height: var(--line-height--medium-large);
+  font-size: var(--font-size--small);
+  font-weight: var(--font-weight--medium);
+  text-align: center;
+}
+
+@media only screen and (max-width: 75em /* 1200px */) {
+  .offer .section__container {
+    grid-template-columns: 60fr 40fr;
+  }
+}
+
+@media only screen and (max-width: 60.5em /* 968px */) {
+  .offer .section__container {
+    grid-template-columns: 70fr 30fr;
+  }
+}
+
+@media only screen and (max-width: 58.25em /* 932px */) {
+  .offer .section__container {
+    grid-template-columns: 1fr;
+    max-width: 70.4rem;
+  }
+  .offer {
+    background: linear-gradient(
+        297deg,
+        rgba(0, 0, 0, 0) 30%,
+        var(--color--shade-3) 84%
+      ),
+      linear-gradient(
+        322deg,
+        var(--color--main-3) 0%,
+        rgba(255, 255, 255, 0) 20%
+      ),
+      linear-gradient(
+        50deg,
+        rgba(79, 64, 67, 0.4) 70%,
+        var(--color--accent-secondary-0) 100%
+      ),
+      linear-gradient(
+        200deg,
+        rgba(255, 255, 255, 0) 50%,
+        var(--color--accent-primary-0) 80%
+      ),
+      center / cover url("../img/wedding.jpg");
+  }
+}
+
+@media only screen and (max-width: 31.75em /* 508px */) {
+  .offer .section__container {
+    padding-top: 16rem;
+    padding-bottom: 12.8rem;
+  }
+}
