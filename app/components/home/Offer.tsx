@@ -15,7 +15,7 @@ export default function Offer() {
   return (
     <>
       <hgroup className="offer__header">
-        <p className="offer__subheading subheading">Oferta</p>
+        <p className="offer__subheading subheading">Na miejscu</p>
         <h2 className="offer__heading heading-secondary">
           Profesjonalna obsługa imprez okolicznościowych
         </h2>
