@@ -10,7 +10,8 @@ export default function Index() {
   return (
     <>
       <Section
-        className="hero"
+        sectionClass="hero curve curve--bottom curve--bottom-shadow-line curve--bottom-shadow-line-gradient-1"
+        containerClass="grid grid--2-columns grid--gap-medium"
         width="wide"
         background="main"
         id="hero"

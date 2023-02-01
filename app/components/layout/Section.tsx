@@ -6,7 +6,8 @@ interface Props {
   children: ReactNode;
   width?: "default" | "wide";
   background?: "none" | "main";
-  className?: string;
+  sectionClass?: string;
+  containerClass?: string;
   id?: string;
   observeRef?: RefObject<HTMLElement>;
 }
@@ -15,19 +16,22 @@ export default function Section({
   children,
   width = "default",
   background = "none",
-  className,
+  sectionClass,
+  containerClass,
   id,
   observeRef,
 }: Props) {
   const sectionClasses = `section ${
     background === "main" ? "background--main" : ""
-  } ${className || ""}`;
+  } ${sectionClass || ""}`;
+
+  const containerClasses = `section__container container container--${width} ${
+    containerClass || ""
+  }`;
 
   return (
     <section className={sectionClasses} id={id || ""} ref={observeRef}>
-      <div className={`section__container container container--${width}`}>
-        {children}
-      </div>
+      <div className={containerClasses}>{children}</div>
     </section>
   );
 }

@@ -13,3 +13,46 @@
 .hero__button--more svg {
   transform: translate(15%, 15%);
 }
+
+@media only screen and (max-width: 75em /* 1200px */) {
+  .hero__heading {
+    font-size: var(--font-size--very-large);
+  }
+  .hero__description {
+    margin-bottom: 3.6rem;
+  }
+}
+
+@media only screen and (max-width: 60.5em /* 968px */) {
+  .hero .section__container {
+    grid-template-columns: 60fr 40fr;
+  }
+}
+
+@media only screen and (max-width: 58.25em /* 932px */) {
+  .hero .section__container {
+    grid-template-columns: 1fr;
+    max-width: 70.4rem;
+  }
+
+  .hero svg {
+    max-width: 61.4rem;
+  }
+
+  .hero__text-group {
+    margin-bottom: 4.8rem;
+  }
+}
+
+@media only screen and (max-width: 28.5em /* 456px */) {
+  .hero__text-group {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    text-align: center;
+  }
+  .hero__button--contact {
+    margin-right: 0;
+    margin-bottom: 1.6rem;
+  }
+}

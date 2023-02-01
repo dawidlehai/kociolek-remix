@@ -3,6 +3,7 @@ import { Link } from "@remix-run/react";
 import { ArrowDown } from "phosphor-react";
 
 import styles from "./Hero.css";
+import Cafeteria from "../svg/Cafeteria";
 
 export default function Hero() {
   return (
@@ -32,6 +33,7 @@ export default function Hero() {
           <ArrowDown weight="bold" />
         </Link>
       </div>
+      <Cafeteria />
     </>
   );
 }
