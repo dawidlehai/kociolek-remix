@@ -1,0 +1,31 @@
+.footer {
+  padding-top: 15rem;
+  padding-bottom: 12.8rem;
+  font-size: var(--font-size--small);
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__credits a:hover,
+.footer__credits a:active {
+  border: none;
+}
+
+@media only screen and (max-width: 62.5em /* 1000px */) {
+  .footer__container {
+    display: block;
+  }
+  .footer__credits {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 31.75em /* 508px */) {
+  .footer {
+    padding-top: 12.8rem;
+    padding-bottom: 8rem;
+  }
+}

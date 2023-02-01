@@ -2,15 +2,8 @@ import type { LinksFunction } from "@remix-run/node";
 import { Link } from "@remix-run/react";
 import { useState, useEffect } from "react";
 
+import type { NavigationLinks } from "~/types/types";
 import styles from "./TopNavigation.css";
-
-export interface NavigationLinks {
-  navigationLinks: {
-    label: string;
-    href: string;
-    highlight?: boolean;
-  }[];
-}
 
 interface Props extends NavigationLinks {
   showMobileMenu: boolean;

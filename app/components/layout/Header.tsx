@@ -2,7 +2,7 @@ import type { LinksFunction } from "@remix-run/node";
 import { Link } from "@remix-run/react";
 import { useState } from "react";
 
-import type { NavigationLinks } from "../navigation/TopNavigation";
+import type { NavigationLinks } from "~/types/types";
 import TopNavigation, {
   links as topNavigationLinks,
 } from "../navigation/TopNavigation";

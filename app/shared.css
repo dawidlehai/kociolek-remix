@@ -120,6 +120,17 @@ a:focus-visible {
   background-color: var(--color--main-2-opaque);
 }
 
+*:link,
+*:visited {
+  text-decoration: none;
+  color: var(--color--main-4);
+}
+
+a:hover,
+a:active {
+  border-bottom: 2px solid var(--color--main-4);
+}
+
 button {
   background: none;
   border: none;
@@ -204,13 +215,13 @@ button {
   }
 }
 
-@media only screen and (max-width: 67em /* 1072px */) {
+@media only screen and (max-width: 70em /* 1120px */) {
   html {
     font-size: 56.25%;
   }
 }
 
-@media only screen and (max-width: 35.75em /* 572px */) {
+@media only screen and (max-width: 37.25em /* 596px */) {
   html {
     font-size: 50%;
   }

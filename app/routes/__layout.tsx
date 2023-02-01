@@ -45,7 +45,7 @@ export default function Layout() {
         {isVisible ? "IN VIEWPORT" : "NOT IN VIEWPORT"}
         <Outlet context={{ observeRef: containerRef }} />
       </main>
-      <Footer />
+      <Footer navigationLinks={navigationLinks} />
     </>
   );
 }
