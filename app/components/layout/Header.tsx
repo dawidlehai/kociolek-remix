@@ -18,6 +18,7 @@ interface Props extends NavigationLinks {
 export default function Header({ navigationLinks, sticky, headerRef }: Props) {
   const [showMenu, setShowMenu] = useState(false);
   const toggleMenuHandler = () => setShowMenu((prevState) => !prevState);
+  const hideMenuHandler = () => setShowMenu(false);
 
   return (
     <header
@@ -27,7 +28,8 @@ export default function Header({ navigationLinks, sticky, headerRef }: Props) {
         <Link
           to="/#top"
           className="header__logo-link"
-          title="Powrót do strony głównej">
+          title="Powrót do strony głównej"
+          onClick={hideMenuHandler}>
           <Logo />
         </Link>
         <TopNavigation
