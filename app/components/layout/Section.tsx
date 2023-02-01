@@ -1,6 +1,4 @@
-import type { LinksFunction } from "@remix-run/node";
 import type { ReactNode, RefObject } from "react";
-import styles from "./Section.css";
 
 interface Props {
   children: ReactNode;
@@ -35,5 +33,3 @@ export default function Section({
     </section>
   );
 }
-
-export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];
