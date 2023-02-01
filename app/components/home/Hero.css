@@ -7,11 +7,11 @@
   margin-bottom: 4.8rem;
 }
 .hero__button--contact {
-  margin-right: 1.6rem;
+  margin-right: 2rem;
 }
 
 .hero__button--more svg {
-  transform: translate(15%, 15%);
+  transform: translate(30%, 15%);
 }
 
 @media only screen and (max-width: 75em /* 1200px */) {
@@ -23,7 +23,7 @@
   }
 }
 
-@media only screen and (max-width: 60.5em /* 968px */) {
+@media only screen and (max-width: 61.25em /* 980px */) {
   .hero .section__container {
     grid-template-columns: 60fr 40fr;
   }
