@@ -14,11 +14,13 @@ export interface NavigationLinks {
 
 interface Props extends NavigationLinks {
   showMobileMenu: boolean;
+  onLinkClick: React.MouseEventHandler;
 }
 
 export default function TopNavigation({
   navigationLinks,
   showMobileMenu,
+  onLinkClick,
 }: Props) {
   const [isHidden, setIsHidden] = useState(true);
 
@@ -42,7 +44,8 @@ export default function TopNavigation({
               to={link.href}
               className={`top-navigation__link ${
                 link.highlight && "button button--white"
-              }`}>
+              }`}
+              onClick={onLinkClick}>
               {link.label}
             </Link>
           </li>

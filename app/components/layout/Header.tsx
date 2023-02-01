@@ -34,6 +34,7 @@ export default function Header({ navigationLinks, sticky, headerRef }: Props) {
         <TopNavigation
           navigationLinks={navigationLinks}
           showMobileMenu={showMenu}
+          onLinkClick={toggleMenuHandler}
         />
         <MenuButton
           ariaLabel={showMenu ? "Zamknij menu" : "Otwórz menu"}
