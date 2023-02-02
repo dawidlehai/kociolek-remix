@@ -1,12 +1,20 @@
-import type { LinksFunction, MetaFunction } from "@remix-run/node";
+import type {
+  ErrorBoundaryComponent,
+  LinksFunction,
+  MetaFunction,
+} from "@remix-run/node";
 import {
+  Link,
   Links,
   LiveReload,
   Meta,
   Outlet,
   Scripts,
   ScrollRestoration,
+  useCatch,
 } from "@remix-run/react";
+import type { CatchBoundaryComponent } from "@remix-run/react/dist/routeModules";
+import type { ReactNode } from "react";
 
 import styles from "~/main.css";
 import faviconLinks from "./faviconLinks";
@@ -44,19 +52,78 @@ export const links: LinksFunction = () => [
   ...faviconLinks,
 ];
 
+interface Props {
+  children: ReactNode;
+  title?: string;
+}
+
+const Root = ({ children, title }: Props) => (
+  <html lang="pl">
+    <head>
+      {title && <title>{title}</title>}
+      <Meta />
+      <Links />
+    </head>
+    <body id="top">
+      {children}
+      <ScrollRestoration />
+      <Scripts />
+      <LiveReload />
+    </body>
+  </html>
+);
+
 export default function App() {
   return (
-    <html lang="pl">
-      <head>
-        <Meta />
-        <Links />
-      </head>
-      <body id="top">
-        <Outlet />
-        <ScrollRestoration />
-        <Scripts />
-        <LiveReload />
-      </body>
-    </html>
+    <Root>
+      <Outlet />
+    </Root>
   );
 }
+
+const ErrorPage = ({
+  heading = "404",
+  message,
+}: {
+  heading?: string;
+  message: string;
+}) => (
+  <main className="error">
+    <img
+      src="/img/logo.svg"
+      style={{ width: "100%", aspectRatio: "617/171" }}
+      className="error__logo"
+      // @ts-ignore: fetchpriority is a relatively new attribute
+      fetchpriority="high"
+      alt="Logo Kociołek"
+    />
+    <h1 className="error__heading">{heading}</h1>
+    <p className="error__message">{message}</p>
+    <p className="error__back">
+      Powrót na{" "}
+      <Link to="/" className="error__back-link">
+        stronę główną
+      </Link>
+      .
+    </p>
+  </main>
+);
+
+export const ErrorBoundary: ErrorBoundaryComponent = ({ error }) => {
+  return (
+    <Root title={error.name}>
+      <ErrorPage heading={error.name} message={error.message} />
+    </Root>
+  );
+};
+
+export const CatchBoundary: CatchBoundaryComponent = () => {
+  const caughtResponse = useCatch();
+  const message = caughtResponse.data?.message || "Podana strona nie istnieje.";
+
+  return (
+    <Root title={`404 – Kociołek`}>
+      <ErrorPage message={message} />
+    </Root>
+  );
+};
