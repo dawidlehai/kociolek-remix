@@ -111,7 +111,7 @@ const ErrorPage = ({
 
 export const ErrorBoundary: ErrorBoundaryComponent = ({ error }) => {
   return (
-    <Root title={error.name}>
+    <Root title={`${error.name} – Kociołek`}>
       <ErrorPage heading={error.name} message={error.message} />
     </Root>
   );

@@ -7,6 +7,13 @@
 .footer__container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer__credits {
+  width: 100%;
+  text-align: center;
+  margin-top: 4.8rem;
 }
 
 .footer__credits a:hover,
@@ -14,7 +21,7 @@
   border: none;
 }
 
-@media only screen and (max-width: 62.5em /* 1000px */) {
+@media only screen and (max-width: 67em /* 1072px */) {
   .footer__container {
     display: block;
   }

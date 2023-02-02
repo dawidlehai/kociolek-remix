@@ -15,7 +15,7 @@ export default function Contact() {
         decoding="async"
         alt="Grafika rodziny zasiadającej przy wspólnym stoliku do posiłku"
       />
-      <div className="contact__text-group">
+      <address className="contact__text-group">
         <p>
           <img
             src="/img/logo.svg"
@@ -45,7 +45,7 @@ export default function Contact() {
             kociolekbydgoszcz@gmail.com
           </a>
         </p>
-      </div>
+      </address>
     </>
   );
 }
