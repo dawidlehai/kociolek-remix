@@ -14,10 +14,21 @@
       200deg,
       rgba(255, 255, 255, 0) 50%,
       var(--color--accent-primary-0) 80%
-    ),
-    center / cover url("/img/wedding.jpg");
+    );
   color: var(--color--white);
   text-shadow: var(--shadow--strong);
+}
+
+.offer__bg-image {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+.offer__bg-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .offer .section__container {
@@ -131,8 +142,7 @@
         200deg,
         rgba(255, 255, 255, 0) 50%,
         var(--color--accent-primary-0) 80%
-      ),
-      center / cover url("/img/wedding.jpg");
+      );
   }
 }
 

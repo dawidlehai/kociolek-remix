@@ -12,6 +12,24 @@ import Contact, { links as contactLinks } from "~/components/home/Contact";
 export default function Index() {
   const { observeRef } = useObserveRef();
 
+  const offerBackground = (
+    <picture className="offer__bg-image">
+      <source
+        type="image/webp"
+        srcSet="/img/wedding-w960.webp 960w, /img/wedding-w1920.webp 1920w, /img/wedding-w3840.webp 3840w"
+      />
+      <img
+        src="/img/wedding-w3840.webp"
+        srcSet="/img/wedding-w960.jpg 960w, /img/wedding-w1920.jpg 1920w, /img/wedding-w3840.jpg 3840w"
+        sizes="(max-width: 960px) 960px, 1920px"
+        style={{ width: "100%", aspectRatio: "128/89" }}
+        loading="lazy"
+        decoding="async"
+        alt="Uroczystość, impreza okolicznościowa, kieliszki, toast"
+      />
+    </picture>
+  );
+
   return (
     <>
       <Section
@@ -23,30 +41,36 @@ export default function Index() {
         observeRef={observeRef}>
         <Hero />
       </Section>
+
       <Section
         sectionClass="offer"
         containerClass="grid grid--gap-medium vertical-padding--large"
-        id="na-miejscu">
+        id="na-miejscu"
+        pictureElement={offerBackground}>
         <Offer />
       </Section>
+
       <Section
         sectionClass="takeaway vertical-padding--large curve curve--top curve--top-shadow-line curve--bottom-shadow-line-gradient-2"
         containerClass="takeaway__container grid grid--2-columns grid--gap-medium"
         id="na-wynos">
         <Takeaway />
       </Section>
+
       <Section
         sectionClass="menu vertical-padding--large"
         containerClass="menu__container grid grid--2-columns grid--gap-medium"
         id="menu">
         <Menu />
       </Section>
+
       <Section
         sectionClass="about vertical-padding--large"
         containerClass="about__container grid grid--2-columns grid--gap-medium"
         id="o-nas">
         <About />
       </Section>
+
       <Section
         sectionClass="contact vertical-padding--large curve curve--bottom curve--bottom-shadow-line curve--bottom-shadow-line-gradient-all"
         containerClass="contact__container grid grid--2-columns"

@@ -8,6 +8,7 @@ interface Props {
   containerClass?: string;
   id?: string;
   observeRef?: RefObject<HTMLElement>;
+  pictureElement?: ReactNode;
 }
 
 export default function Section({
@@ -18,6 +19,7 @@ export default function Section({
   containerClass,
   id,
   observeRef,
+  pictureElement,
 }: Props) {
   const sectionClasses = `section ${
     background === "main" ? "background--main" : ""
@@ -29,6 +31,7 @@ export default function Section({
 
   return (
     <section className={sectionClasses} id={id || ""} ref={observeRef}>
+      {pictureElement || ""}
       <div className={containerClasses}>{children}</div>
     </section>
   );
