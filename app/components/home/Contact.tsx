@@ -40,7 +40,7 @@ export default function Contact() {
           Numer telefonu: <a href="tel:+48721473077">+48 721 473 077</a>
         </p>
         <p className="contact__company-mail">
-          Adres e-mail:
+          Adres e-mail:{" "}
           <a href="mailto:kociolekbydgoszcz@gmail.com?subject=Wiadomość%20ze%20strony%20kociolekbydgoszcz.pl">
             kociolekbydgoszcz@gmail.com
           </a>

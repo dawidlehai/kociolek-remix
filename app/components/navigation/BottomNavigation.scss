@@ -32,6 +32,18 @@
   transform: translateY(15%);
 }
 
+@media only screen and (max-width: 75em /* 1200px */) {
+  .footer .container {
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 70em /* 1120px */) {
+  .footer .container {
+    justify-content: space-between;
+  }
+}
+
 @media only screen and (max-width: 67em /* 1072px */) {
   .footer-navigation__ul {
     justify-content: center;
