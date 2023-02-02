@@ -1,9 +1,7 @@
-import type { LinksFunction } from "@remix-run/node";
 import { Link } from "@remix-run/react";
 import { ArrowUp } from "phosphor-react";
 
 import type { NavigationLinks } from "~/types/types";
-import styles from "./BottomNavigation.css";
 
 export default function BottomNavigation({ navigationLinks }: NavigationLinks) {
   return (
@@ -27,5 +25,3 @@ export default function BottomNavigation({ navigationLinks }: NavigationLinks) {
     </nav>
   );
 }
-
-export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];

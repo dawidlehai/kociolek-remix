@@ -1,8 +1,5 @@
-import type { LinksFunction } from "@remix-run/node";
 import { Link } from "@remix-run/react";
 import { ArrowDown } from "phosphor-react";
-
-import styles from "./Hero.css";
 
 export default function Hero() {
   return (
@@ -43,5 +40,3 @@ export default function Hero() {
     </>
   );
 }
-
-export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];

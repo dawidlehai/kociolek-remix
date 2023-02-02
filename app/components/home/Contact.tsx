@@ -1,7 +1,3 @@
-import type { LinksFunction } from "@remix-run/node";
-
-import styles from "./Contact.css";
-
 export default function Contact() {
   return (
     <>
@@ -53,5 +49,3 @@ export default function Contact() {
     </>
   );
 }
-
-export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];

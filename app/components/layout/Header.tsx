@@ -1,13 +1,9 @@
-import type { LinksFunction } from "@remix-run/node";
 import { Link } from "@remix-run/react";
 import { useState } from "react";
 
 import type { NavigationLinks } from "~/types/types";
-import TopNavigation, {
-  links as topNavigationLinks,
-} from "../navigation/TopNavigation";
+import TopNavigation from "../navigation/TopNavigation";
 import MenuButton from "../utils/MenuButton";
-import styles from "./Header.css";
 
 interface Props extends NavigationLinks {
   sticky: boolean;
@@ -54,8 +50,3 @@ export default function Header({ navigationLinks, sticky, headerRef }: Props) {
     </header>
   );
 }
-
-export const links: LinksFunction = () => [
-  { rel: "stylesheet", href: styles },
-  ...topNavigationLinks(),
-];

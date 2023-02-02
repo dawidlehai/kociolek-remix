@@ -1,7 +1,3 @@
-import type { LinksFunction } from "@remix-run/node";
-
-import styles from "./Takeaway.css";
-
 export default function Takeaway() {
   return (
     <>
@@ -35,5 +31,3 @@ export default function Takeaway() {
     </>
   );
 }
-
-export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];

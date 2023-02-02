@@ -1,4 +1,4 @@
-const faviconsPath = "img/favicons";
+const faviconsPath = "/img/favicons";
 
 const generateFavicons = (sizes: number[]) =>
   sizes.map((size) => ({
@@ -22,6 +22,6 @@ export default [
   },
   {
     rel: "manifest",
-    href: "manifest.webmanifest",
+    href: "/manifest.webmanifest",
   },
 ];

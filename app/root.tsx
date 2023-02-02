@@ -8,7 +8,7 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 
-import styles from "~/shared.css";
+import styles from "~/main.css";
 import faviconLinks from "./faviconLinks";
 
 export const meta: MetaFunction = () => ({

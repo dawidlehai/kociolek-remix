@@ -1,4 +1,3 @@
-import type { LinksFunction } from "@remix-run/node";
 import {
   Baby,
   Cake,
@@ -8,8 +7,6 @@ import {
   Gift,
   Martini,
 } from "phosphor-react";
-
-import styles from "./Offer.css";
 
 export default function Offer() {
   return (
@@ -76,5 +73,3 @@ export default function Offer() {
     </>
   );
 }
-
-export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];

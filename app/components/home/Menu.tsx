@@ -1,7 +1,3 @@
-import type { LinksFunction } from "@remix-run/node";
-
-import styles from "./Menu.css";
-
 export default function Menu() {
   return (
     <>
@@ -42,5 +38,3 @@ export default function Menu() {
     </>
   );
 }
-
-export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];

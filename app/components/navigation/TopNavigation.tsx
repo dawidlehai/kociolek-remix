@@ -1,9 +1,7 @@
-import type { LinksFunction } from "@remix-run/node";
 import { Link } from "@remix-run/react";
 import { useState, useEffect } from "react";
 
 import type { NavigationLinks } from "~/types/types";
-import styles from "./TopNavigation.css";
 
 interface Props extends NavigationLinks {
   showMobileMenu: boolean;
@@ -47,5 +45,3 @@ export default function TopNavigation({
     </nav>
   );
 }
-
-export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];

@@ -1,7 +1,3 @@
-import type { LinksFunction } from "@remix-run/node";
-
-import styles from "./About.css";
-
 export default function About() {
   return (
     <>
@@ -73,5 +69,3 @@ export default function About() {
     </>
   );
 }
-
-export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];

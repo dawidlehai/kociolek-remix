@@ -1,10 +1,5 @@
-import type { LinksFunction } from "@remix-run/node";
-
 import type { NavigationLinks } from "~/types/types";
-import styles from "./Footer.css";
-import BottomNavigation, {
-  links as BottomNavigationLinks,
-} from "../navigation/BottomNavigation";
+import BottomNavigation from "../navigation/BottomNavigation";
 
 export default function Footer({ navigationLinks }: NavigationLinks) {
   return (
@@ -23,8 +18,3 @@ export default function Footer({ navigationLinks }: NavigationLinks) {
     </footer>
   );
 }
-
-export const links: LinksFunction = () => [
-  { rel: "stylesheet", href: styles },
-  ...BottomNavigationLinks(),
-];

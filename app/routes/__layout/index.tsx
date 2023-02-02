@@ -2,12 +2,14 @@ import type { LinksFunction } from "@remix-run/node";
 
 import { useObserveRef } from "~/routes/__layout";
 import Section from "~/components/layout/Section";
-import Hero, { links as heroLinks } from "~/components/home/Hero";
-import Offer, { links as offerLinks } from "~/components/home/Offer";
-import Takeaway, { links as takeawayLinks } from "~/components/home/Takeaway";
-import Menu, { links as menuLinks } from "~/components/home/Menu";
-import About, { links as aboutLinks } from "~/components/home/About";
-import Contact, { links as contactLinks } from "~/components/home/Contact";
+import Hero from "~/components/home/Hero";
+import Offer from "~/components/home/Offer";
+import Takeaway from "~/components/home/Takeaway";
+import Menu from "~/components/home/Menu";
+import About from "~/components/home/About";
+import Contact from "~/components/home/Contact";
+
+import homeStyles from "~/styles/home.css";
 
 export default function Index() {
   const { observeRef } = useObserveRef();
@@ -82,10 +84,5 @@ export default function Index() {
 }
 
 export const links: LinksFunction = () => [
-  ...heroLinks(),
-  ...offerLinks(),
-  ...takeawayLinks(),
-  ...menuLinks(),
-  ...aboutLinks(),
-  ...contactLinks(),
+  { rel: "stylesheet", href: homeStyles },
 ];
