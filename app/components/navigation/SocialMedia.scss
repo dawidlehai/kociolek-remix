@@ -6,8 +6,13 @@
   border-radius: var(--border-radius--large);
 }
 
+.social__link:hover,
+.social__link:active {
+  border-bottom: 3px solid currentColor;
+}
+
 .social__link svg {
-  transform: translateY(20%);
+  transform: translateY(19%);
 }
 
 @media only screen and (max-width: 67em /* 1072px */) {

@@ -29,9 +29,26 @@ export const meta: MetaFunction = () => ({
     httpEquiv: "X-UA-Compatible",
     content: "IE=edge",
   },
+  ICBM: "53.11238011922019, 18.033702540507413",
+  "geo.position": "53.11238011922019;18.033702540507413",
+  "geo.region": "PL",
+  "geo.placename": "Bydgoszcz",
+  "og:url": "https://kociolekbydgoszcz.pl/",
+  "og:type": "website",
+  "og:title": "Kociołek – Bufet w Modraczku",
+  "og:image": "https://kociolekbydgoszcz.pl/img/kociolek.jpg",
+  "og:image:alt": "Stół pełen pysznego jedzenia cateringowego",
+  "og:description":
+    "Kociołek to bufet i kawiarnia umieszczona na pierwszym piętrze Domu Kultury “Modraczek”, na Wyżynach w Bydgoszczy. Jest to wspaniałe miejsce spotkań, w którym możesz zorganizować dowolną imprezę okolicznościową wraz z profesjonalną obsługą cateringową, zjeść pyszne posiłki obiadowe, a także zamówić wybrane potrawy i dania garmażeryjne na wynos.",
+  "og:site_name": "Kociołek – Agnieszka Tomaszewska-Le",
+  "og:locale": "pl_PL",
 });
 
 export const links: LinksFunction = () => [
+  {
+    rel: "canonical",
+    href: "https://kociolekbydgoszcz.pl/",
+  },
   {
     rel: "stylesheet",
     href: styles,
