@@ -1,5 +1,4 @@
 import type { LinksFunction } from "@remix-run/node";
-import TakeawaySvg from "../svg/TakeawaySvg";
 
 import styles from "./Takeaway.css";
 
@@ -25,7 +24,14 @@ export default function Takeaway() {
           Zadzwoń i zamów
         </a>
       </div>
-      <TakeawaySvg />
+      <img
+        src="/img/takeaway.svg"
+        style={{ width: "100%", aspectRatio: "443/222" }}
+        className="takeaway__image"
+        loading="lazy"
+        decoding="async"
+        alt="Zapakowane produkty na wynos, pączki, kawa, sałatki i lemoniada"
+      />
     </>
   );
 }

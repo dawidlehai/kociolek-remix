@@ -26,7 +26,7 @@ export default function About() {
         kelnerów. Skontaktuj się z nami, a wspólnie ustalimy wszelkie szczegóły
         Twojej imprezy!
       </p>
-      <iframe
+      {/* <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2394.885507415805!2d18.031535315579262!3d53.11224809992137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470313031b9c823f%3A0x4841d8b74f0165b0!2sKocio%C5%82ek%20-%20Agnieszka%20Tomaszewska-Le!5e0!3m2!1sen!2spl!4v1665413028797!5m2!1sen!2spl"
         width="600"
         height="450"
@@ -35,7 +35,7 @@ export default function About() {
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
         className="about__map grid--span"
-        title="Mapy Google z lokalizacją firmy"></iframe>
+        title="Mapy Google z lokalizacją firmy"></iframe> */}
       <section className="owner background--main grid--span flex flex--center animate--from-right">
         <picture>
           <source

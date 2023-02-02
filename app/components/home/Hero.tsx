@@ -3,7 +3,6 @@ import { Link } from "@remix-run/react";
 import { ArrowDown } from "phosphor-react";
 
 import styles from "./Hero.css";
-import Cafeteria from "../svg/Cafeteria";
 
 export default function Hero() {
   return (
@@ -33,7 +32,14 @@ export default function Hero() {
           <ArrowDown weight="bold" />
         </Link>
       </div>
-      <Cafeteria />
+      <img
+        src="/img/hero.svg"
+        style={{ width: "100%", aspectRatio: "3662/2951" }}
+        className="hero__image"
+        // @ts-ignore: fetchpriority is a relatively new attribute
+        fetchpriority="high"
+        alt="Grafika przedstawiająca kawiarnię"
+      />
     </>
   );
 }

@@ -1,6 +1,4 @@
 import type { LinksFunction } from "@remix-run/node";
-import Family from "../svg/Family";
-import Logo from "../svg/Logo";
 
 import styles from "./Contact.css";
 
@@ -13,10 +11,24 @@ export default function Contact() {
           Skontaktuj się z nami, aby dowiedzieć się więcej
         </h2>
       </hgroup>
-      <Family className="contact__image" />
+      <img
+        src="/img/family.svg"
+        style={{ width: "100%", aspectRatio: "951/575" }}
+        className="contact__image"
+        loading="lazy"
+        decoding="async"
+        alt="Grafika rodziny zasiadającej przy wspólnym stoliku do posiłku"
+      />
       <div className="contact__text-group">
         <p>
-          <Logo className="contact__logo" />
+          <img
+            src="/img/logo.svg"
+            style={{ width: "100%", aspectRatio: "617/171" }}
+            className="contact__logo"
+            loading="lazy"
+            decoding="async"
+            alt="Logo Kociołek"
+          />
         </p>
         <p className="contact__company-name">
           “Kociołek” Agnieszka Tomaszewska-Le

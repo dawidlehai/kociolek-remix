@@ -7,7 +7,6 @@ import TopNavigation, {
   links as topNavigationLinks,
 } from "../navigation/TopNavigation";
 import MenuButton from "../utils/MenuButton";
-import Logo from "../svg/Logo";
 import styles from "./Header.css";
 
 interface Props extends NavigationLinks {
@@ -30,7 +29,13 @@ export default function Header({ navigationLinks, sticky, headerRef }: Props) {
           className="header__logo-link"
           title="Powrót do strony głównej"
           onClick={hideMenuHandler}>
-          <Logo />
+          <img
+            src="/img/logo.svg"
+            style={{ width: "100%", aspectRatio: "617/171" }}
+            // @ts-ignore: fetchpriority is a relatively new attribute
+            fetchpriority="high"
+            alt="Logo Kociołek"
+          />
         </Link>
         <TopNavigation
           navigationLinks={navigationLinks}
