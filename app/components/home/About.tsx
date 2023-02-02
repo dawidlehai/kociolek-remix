@@ -39,20 +39,19 @@ export default function About() {
       <section className="owner background--main grid--span flex flex--center animate--from-right">
         <picture>
           <source
-            srcSet="/img/agnieszka-tomaszewska-le.webp"
             type="image/webp"
-          />
-          <source
-            srcSet="/img/agnieszka-tomaszewska-le.jpg"
-            type="image/jpeg"
+            srcSet="/img/agnieszka-tomaszewska-le-w180.webp 180w, /img/agnieszka-tomaszewska-le-w300.webp 300w, /img/agnieszka-tomaszewska-le-w600.webp 600w"
+            sizes="(max-width: 968px) 180px, 300px"
           />
           <img
-            src="/img/agnieszka-tomaszewska-le.jpg"
-            alt="Uśmiechnięta kobieta po 40-stce w beżowym stroju."
-            title="Agnieszka Tomaszewska-Le"
+            src="/img/agnieszka-tomaszewska-le-w600.jpg"
+            srcSet="/img/agnieszka-tomaszewska-le-w180.jpg 180w, /img/agnieszka-tomaszewska-le-w300.jpg 300w, /img/agnieszka-tomaszewska-le-w600.jpg 600w"
+            sizes="(max-width: 968px) 180px, 300px"
+            style={{ maxWidth: "30rem", aspectRatio: "6/9" }}
             className="owner__image"
-            width="300px"
-            height="450px"
+            loading="lazy"
+            decoding="async"
+            alt="Uśmiechnięta kobieta po 40-stce w beżowym stroju."
           />
         </picture>
         <div className="owner__text-group">
