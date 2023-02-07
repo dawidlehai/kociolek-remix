@@ -1,62 +1,21 @@
-# Welcome to Remix!
+# [<img src="https://github.com/dawidlehai/kociolek/raw/master/img/kociolek-logo.svg" alt="Kociołek logo" width="250px">](https://kociolekbydgoszcz.pl/ 'kociolekbydgoszcz.pl')
 
-- [Remix Docs](https://remix.run/docs)
-- [Netlify Functions](https://www.netlify.com/products/functions/)
+**Remix version of Kociołek's home page — buffet and cafe in Bydgoszcz, Poland.**
 
-## Netlify Setup
+This is the second and the newest version of the project — this time rewritten in React and Remix.
 
-1. Install the [Netlify CLI](https://www.netlify.com/products/dev/):
+This website was created for Kociołek company from scratch. I designed it by myself, including layout, colors, typography selection and overall appearance. It is fully responsive and mobile-ready.
 
-```sh
-npm i -g netlify-cli
-```
+## 💻 Screenshots
+[<img src="https://github.com/dawidlehai/kociolek/raw/master/img/kociolek-screenshot-01.webp" alt="Screenshot #1 of the Kociołek website" width="412px">](https://kociolekbydgoszcz.pl/ 'kociolekbydgoszcz.pl')
+[<img src="https://github.com/dawidlehai/kociolek/raw/master/img/kociolek-screenshot-02.webp" alt="Screenshot #2 of the Kociołek website" width="412px">](https://kociolekbydgoszcz.pl/ 'kociolekbydgoszcz.pl')
+[<img src="https://github.com/dawidlehai/kociolek/raw/master/img/kociolek-screenshot-03.webp" alt="Screenshot #3 of the Kociołek website" width="412px">](https://kociolekbydgoszcz.pl/ 'kociolekbydgoszcz.pl')
+[<img src="https://github.com/dawidlehai/kociolek/raw/master/img/kociolek-screenshot-05.webp" alt="Screenshot #4 of the Kociołek website" width="412px">](https://kociolekbydgoszcz.pl/ 'kociolekbydgoszcz.pl')
 
-If you have previously installed the Netlify CLI, you should update it to the latest version:
+## 🛠️ Tools and technologies
+`Remix` `React` `TypeScript` `CSS` `VS Code`
 
-```sh
-npm i -g netlify-cli@latest
-```
+## 🌐 Deployment
+Deployed on `Netlify` with a custom domain.
 
-2. Sign up and log in to Netlify:
-
-```sh
-netlify login
-```
-
-3. Create a new site:
-
-```sh
-netlify init
-```
-
-## Development
-
-The Remix dev server starts your app in development mode, rebuilding assets on file changes. To start the Remix dev server:
-
-```sh
-npm run dev
-```
-
-Open up [http://localhost:3000](http://localhost:3000), and you should be ready to go!
-
-The Netlify CLI builds a production version of your Remix App Server and splits it into Netlify Functions that run locally. This includes any custom Netlify functions you've developed. The Netlify CLI runs all of this in its development mode.
-
-```sh
-netlify dev
-```
-
-Open up [http://localhost:3000](http://localhost:3000), and you should be ready to go!
-
-Note: When running the Netlify CLI, file changes will rebuild assets, but you will not see the changes to the page you are on unless you do a browser refresh of the page. Due to how the Netlify CLI builds the Remix App Server, it does not support hot module reloading.
-
-## Deployment
-
-There are two ways to deploy your app to Netlify, you can either link your app to your git repo and have it auto deploy changes to Netlify, or you can deploy your app manually. If you've followed the setup instructions already, all you need to do is run this:
-
-```sh
-# preview deployment
-netlify deploy --build
-
-# production deployment
-netlify deploy --build --prod
-```
+Live at [kociolekbydgoszcz.pl](https://kociolekbydgoszcz.pl/).
