@@ -42,6 +42,7 @@ export const meta: MetaFunction = () => ({
     "Kociołek to bufet i kawiarnia umieszczona na pierwszym piętrze Domu Kultury “Modraczek”, na Wyżynach w Bydgoszczy. Jest to wspaniałe miejsce spotkań, w którym możesz zorganizować dowolną imprezę okolicznościową wraz z profesjonalną obsługą cateringową, zjeść pyszne posiłki obiadowe, a także zamówić wybrane potrawy i dania garmażeryjne na wynos.",
   "og:site_name": "Kociołek – Agnieszka Tomaszewska-Le",
   "og:locale": "pl_PL",
+  "google-site-verification": "8U9aVXXCdffqe80rSBnau1bCViZnAyMMF14lGSwVgH0",
 });
 
 export const links: LinksFunction = () => [
