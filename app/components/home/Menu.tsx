@@ -1,3 +1,5 @@
+import MenuItem from "../menu/MenuItem";
+
 export default function Menu() {
   return (
     <>
@@ -35,6 +37,7 @@ export default function Menu() {
         <span>Smaczne</span>
         <span>Zdrowe</span>
       </figure>
+      <MenuItem></MenuItem>
     </>
   );
 }

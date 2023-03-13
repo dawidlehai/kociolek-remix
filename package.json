@@ -4,7 +4,7 @@
   "scripts": {
     "build": "remix build",
     "dev": "concurrently \"npm run sass\" \"remix dev\"",
-    "sass": "sass --watch --style=compressed app/main.scss:app/main.css app/styles/home.scss:app/styles/home.css",
+    "sass": "sass --watch --style=compressed app/main.scss:app/main.css app/styles/home.scss:app/styles/home.css app/styles/wielkanoc.scss:app/styles/wielkanoc.css",
     "start": "cross-env NODE_ENV=production netlify dev",
     "typecheck": "tsc"
   },

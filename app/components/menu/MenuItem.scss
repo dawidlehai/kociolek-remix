@@ -1,0 +1,10 @@
+.menu-item {
+  grid-column: 1 / -1;
+  background-color: var(--color--accent-primary-0);
+  padding: 3.2rem;
+  border-radius: calc(2.4rem + var(--border-radius--large));
+}
+
+.menu-item__desc {
+  margin-bottom: 3.2rem;
+}
