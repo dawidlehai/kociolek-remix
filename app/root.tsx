@@ -47,10 +47,6 @@ export const meta: MetaFunction = () => ({
 
 export const links: LinksFunction = () => [
   {
-    rel: "canonical",
-    href: "https://kociolekbydgoszcz.pl/",
-  },
-  {
     rel: "stylesheet",
     href: styles,
   },

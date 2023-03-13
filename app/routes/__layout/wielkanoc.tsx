@@ -1,6 +1,14 @@
-import type { LinksFunction } from "@remix-run/node";
+import type { LinksFunction, MetaFunction } from "@remix-run/node";
 
 import wielkanocStyles from "~/styles/wielkanoc.css";
+
+export const meta: MetaFunction = () => ({
+  title: "Kociołek – Menu Wielkanoc 2023",
+  "og:url": "https://kociolekbydgoszcz.pl/wielkanoc",
+  "og:title": "Kociołek – Menu Wielkanoc 2023",
+  "og:image": "https://kociolekbydgoszcz.pl/img/wielkanoc.png",
+  "og:image:alt": "Stół pełen pysznego jedzenia cateringowego",
+});
 
 export default function WielkanocPage() {
   return (
