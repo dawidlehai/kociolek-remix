@@ -118,6 +118,11 @@ export default function WielkanocPage() {
             <td>6 zł/szt.</td>
           </tr>
         </table>
+
+        <p className="menu-info">
+          Zamówienia prosimy składać pod numerem <strong>721 473 077</strong> do{" "}
+          <strong>3 kwietnia</strong> 2023 roku.
+        </p>
       </section>
     </>
   );
