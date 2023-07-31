@@ -9,12 +9,7 @@ export default function Footer({ navigationLinks }: NavigationLinks) {
         <BottomNavigation navigationLinks={navigationLinks} />
         <SocialMedia />
         <p className="footer__credits">
-          Designed and developed by{" "}
-          <a
-            href="https://github.com/dawidlehai/kociolek-remix"
-            title="Repozytorium projektu na GitHubie">
-            Dawid Le Hai
-          </a>
+          
         </p>
       </div>
     </footer>
