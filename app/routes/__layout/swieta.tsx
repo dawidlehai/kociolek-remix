@@ -131,7 +131,7 @@ export default function WielkanocPage() {
           </tr>
           <tr>
             <td>Kaczka faszerowana</td>
-            <td>19 zł/sztuka</td>
+            <td>90 zł/sztuka</td>
           </tr>
           <tr>
             <td>Pieczeń karkówki ze śliwką</td>
