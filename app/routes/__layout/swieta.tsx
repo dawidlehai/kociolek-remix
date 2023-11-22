@@ -141,7 +141,8 @@ export default function WielkanocPage() {
 
         <p className="menu-info">
           Zamówienia prosimy składać pod numerem <strong>721 473 077</strong>{" "}
-          lub w lokalu na pierwszym piętrze DK Modraczek przy ul. Ogrody 15.
+          lub w lokalu na pierwszym piętrze DK Modraczek przy ul. Ogrody 15{" "}
+          <strong>do 18 grudnia</strong>.
         </p>
       </section>
     </>
