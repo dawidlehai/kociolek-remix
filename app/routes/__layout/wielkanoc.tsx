@@ -106,7 +106,7 @@ export default function WielkanocPage() {
             <td>55 zł/kg</td>
           </tr>
           <tr>
-            <td>Pasztecik drobiowy z mięsem</td>
+            <td>Pasztecik drożdżowy z mięsem</td>
             <td>5 zł/sztuka</td>
           </tr>
         </table>
