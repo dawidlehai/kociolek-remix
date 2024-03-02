@@ -1,11 +1,11 @@
 export default function MenuItem() {
   return (
     <article className="menu-item">
-      <h3>Menu na Święta Bożego Narodzenia 2023</h3>
+      <h3>Menu na Święta Wielkanocne 2024</h3>
       <p className="menu-item__desc">
-        Sprawdź nasze propozycje na Święta Bożego Narodzenia!
+        Sprawdź nasze propozycje na Święta Wielkanocne 2024!
       </p>
-      <a href="/swieta" className="button button--white">
+      <a href="/wielkanoc" className="button button--white">
         Menu Świąteczne
       </a>
     </article>
