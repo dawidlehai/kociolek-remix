@@ -1,8 +1,16 @@
 .menu-item {
   grid-column: 1 / -1;
+  border-radius: calc(2.4rem + var(--border-radius--large));
   background-color: var(--color--accent-primary-0);
   padding: 3.2rem;
-  border-radius: calc(2.4rem + var(--border-radius--large));
+}
+
+.menu-item--orange {
+  background-color: var(--color--main-3);
+}
+
+.menu-item--marine {
+  background-color: var(--color--accent-secondary-0);
 }
 
 .menu-item__desc {
