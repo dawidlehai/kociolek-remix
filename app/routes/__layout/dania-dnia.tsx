@@ -1,6 +1,6 @@
 import type { LinksFunction, MetaFunction } from "@remix-run/node";
 
-import daniaDniaStyles from "~/styles/menu-page.scss";
+import daniaDniaStyles from "~/styles/menu-page.css";
 
 export const meta: MetaFunction = () => ({
   title: "Dania dnia – Kociołek",
