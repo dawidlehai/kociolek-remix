@@ -38,7 +38,7 @@ export default function Menu() {
         <span>Zdrowe</span>
       </figure>
       <MenuItem
-        title="Dania dnia na miejscu"
+        title="Dania obiadowe na miejscu"
         desc="Sprawdź nasze dania dnia na bieżący tydzień. Przyjdź i zjedz wygodnie na miejscu od poniedziałku do piątku w godzinach 12-17."
         link="/dania-dnia"
         linkText="Sprawdź nasze menu"
