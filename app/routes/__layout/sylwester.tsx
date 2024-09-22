@@ -1,6 +1,6 @@
 import type { LinksFunction, MetaFunction } from "@remix-run/node";
 
-import wielkanocStyles from "~/styles/wielkanoc.css";
+import wielkanocStyles from "~/styles/menu-page.css";
 
 export const meta: MetaFunction = () => ({
   title: "Kociołek – Menu na Sylwestra 2023/2024",
