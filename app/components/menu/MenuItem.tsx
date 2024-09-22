@@ -3,7 +3,7 @@ interface MenuItemProps {
   desc: string;
   link: string;
   linkText: string;
-  color?: string;
+  color?: "orange" | "marine";
 }
 
 export default function MenuItem({
