@@ -33,6 +33,10 @@ export default function Layout() {
 
   return (
     <>
+      <p className="info">
+        Uwaga! W dniach 21-25.10 Kociołek będzie nieczynny (nie dotyczy imprez
+        zorganizowanych).
+      </p>
       <Header
         navigationLinks={navigationLinks}
         sticky={!isVisible}
@@ -40,7 +44,8 @@ export default function Layout() {
       />
       <main
         className="main"
-        style={{ marginTop: !isVisible ? `${headerHeight}px` : "0" }}>
+        style={{ marginTop: !isVisible ? `${headerHeight}px` : "0" }}
+      >
         <Outlet context={{ observeRef: containerRef }} />
       </main>
       <Footer navigationLinks={navigationLinks} />
