@@ -33,10 +33,10 @@ export default function Layout() {
 
   return (
     <>
-      <p className="info">
+      {/* <p className="info">
         Uwaga! W dniach 21-25.10 Kociołek będzie nieczynny (nie dotyczy imprez
         zorganizowanych).
-      </p>
+      </p> */}
       <Header
         navigationLinks={navigationLinks}
         sticky={!isVisible}
