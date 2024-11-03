@@ -3,9 +3,9 @@ import type { LinksFunction, MetaFunction } from "@remix-run/node";
 import wielkanocStyles from "~/styles/menu-page.css";
 
 export const meta: MetaFunction = () => ({
-  title: "Kociołek – Menu na Sylwestra 2023/2024",
+  title: "Kociołek – Menu na Sylwestra 2024/2025",
   "og:url": "https://kociolekbydgoszcz.pl/swieta",
-  "og:title": "Kociołek – na Sylwestra 2023/2024",
+  "og:title": "Kociołek – na Sylwestra 2024/2025",
   "og:image": "https://kociolekbydgoszcz.pl/img/wielkanoc.png",
   "og:image:alt": "Stół pełen pysznego jedzenia cateringowego",
 });
@@ -15,7 +15,7 @@ export default function WielkanocPage() {
     <>
       <header className="menu-header">
         <h1 className="menu-header__heading container container--default">
-          Menu na Sylwestra 2023/2024
+          Menu na Sylwestra 2024/2025
         </h1>
       </header>
       <section className="menu-section container container--default">
