@@ -7,6 +7,10 @@
   background-color: var(--color--main-3);
 }
 
+.menu-header--marine {
+  background-color: var(--color--accent-secondary-0);
+}
+
 .menu-header__heading {
   text-align: center;
 }
@@ -45,5 +49,11 @@
 }
 
 .menu-img {
+  width: 100%;
+}
+
+.wigilia-img {
+  margin-top: 6.4rem;
+  margin-bottom: 6.4rem;
   width: 100%;
 }
