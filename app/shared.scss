@@ -400,6 +400,14 @@ button {
   text-align: center;
 }
 
+.closed-banner {
+  background-color: var(--color--main-4);
+  padding: 1.6rem 0;
+  color: var(--color--white);
+  font-size: var(--font-size--small);
+  text-align: center;
+}
+
 @media only screen and (max-width: 83.25em /* 1332px */) {
   .container--max {
     max-width: var(--page-width--wide);
