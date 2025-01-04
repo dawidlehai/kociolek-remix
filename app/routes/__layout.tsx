@@ -34,15 +34,15 @@ export default function Layout() {
 
   return (
     <>
-      <TemporarilyClosedBanner
+      {/* <TemporarilyClosedBanner
         dateStart={new Date("2024-12-08")}
         dateEnd={new Date("2024-12-13")}
         message="Ze względu na obsługę dużej liczby spotkań opłatkowych, Kociołek będzie zamknięty w dniach 9-13 grudnia."
-      />
-      <p className="info">
+      /> */}
+      {/* <p className="info">
         Bilety na Sylwestra już w sprzedaży!{" "}
         <a href="/sylwester.pdf">Sprawdź!</a>
-      </p>
+      </p> */}
       <Header
         navigationLinks={navigationLinks}
         sticky={!isVisible}

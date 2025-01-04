@@ -1,5 +1,5 @@
 import type { LinksFunction, MetaFunction } from "@remix-run/node";
-
+import { getWeek } from "date-fns";
 import daniaDniaStyles from "~/styles/menu-page.css";
 
 export const meta: MetaFunction = () => ({
@@ -9,16 +9,10 @@ export const meta: MetaFunction = () => ({
 });
 
 export default function DaniaDnia() {
-  function getWeekNumber(dateString?: string): number {
-    const date = dateString ? new Date(dateString) : new Date();
-    const oneJan = new Date(date.getFullYear(), 0, 1);
-    const timeDiff = date.getTime() - oneJan.getTime();
-    const dayDiff = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
-    const weekDiff = Math.ceil((dayDiff + (date.getDay() === 0 ? 1 : 0)) / 7);
-    return weekDiff;
-  }
-  const week = (getWeekNumber() % 4) + 1;
-  console.log("Dania dnia na tydzień", week);
+  const currWeek = getWeek(new Date());
+  const menuNum = (currWeek % 4) + 1;
+  console.log("Aktualny tydzień", currWeek);
+  console.log("Dania dnia na ten tydzień (do soboty włącznie)", menuNum);
 
   return (
     <>
@@ -30,7 +24,7 @@ export default function DaniaDnia() {
       <section className="menu-section container container--default">
         <img
           className="menu-img"
-          src={`/img/menu/dania-dnia-${week}.jpg`}
+          src={`/img/menu/dania-dnia-${menuNum}.jpg`}
           alt="Menu"
         />
         <p className="menu-info">
