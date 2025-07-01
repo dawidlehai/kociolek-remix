@@ -1,12 +1,11 @@
-import type { RefObject } from "react";
 import { Outlet, useOutletContext } from "@remix-run/react";
+import type { RefObject } from "react";
 import { useRef } from "react";
 
+import Footer from "~/components/layout/Footer";
+import Header from "~/components/layout/Header";
 import type { optionsType } from "~/hooks/useObserver";
 import useObserver from "~/hooks/useObserver";
-import Header from "~/components/layout/Header";
-import Footer from "~/components/layout/Footer";
-import TemporarilyClosedBanner from "~/components/utils/TemporarilyClosedBanner";
 
 const navigationLinks = [
   { label: "Na miejscu", href: "/#na-miejscu" },
@@ -39,10 +38,10 @@ export default function Layout() {
         dateEnd={new Date("2024-12-13")}
         message="Ze względu na obsługę dużej liczby spotkań opłatkowych, Kociołek będzie zamknięty w dniach 9-13 grudnia."
       /> */}
-      {/* <p className="info">
-        Bilety na Sylwestra już w sprzedaży!{" "}
-        <a href="/sylwester.pdf">Sprawdź!</a>
-      </p> */}
+      <p className="info">
+        W lipcu jesteśmy otwarci od 8 do 16. W sierpniu Kociołek będzie
+        nieczynny.
+      </p>
       <Header
         navigationLinks={navigationLinks}
         sticky={!isVisible}
