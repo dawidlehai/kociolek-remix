@@ -46,7 +46,7 @@ export default function Menu() {
       ></MenuItem> */}
       <MenuItem
         title="Dania obiadowe na miejscu"
-        desc="Sprawdź nasze dania dnia na bieżący tydzień. Przyjdź i zjedz wygodnie na miejscu od poniedziałku do piątku w godzinach 12-17."
+        desc="Sprawdź nasze dania dnia na bieżący tydzień. Przyjdź i zjedz wygodnie na miejscu od poniedziałku do piątku w godzinach 12-16."
         link="/dania-dnia"
         linkText="Sprawdź nasze menu"
         color="orange"
