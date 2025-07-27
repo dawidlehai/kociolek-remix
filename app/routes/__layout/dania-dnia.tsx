@@ -29,7 +29,7 @@ export default function DaniaDnia() {
         /> */}
         <img
           className="menu-img"
-          src={`/img/menu/dania-dnia-3-lipiec-2025.jpg`}
+          src={`/img/menu/dania-dnia-4-lipiec-2025.jpg`}
           alt="Menu"
         />
         {/* <p className="menu-info">
