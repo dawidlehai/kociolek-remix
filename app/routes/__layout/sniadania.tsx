@@ -17,9 +17,13 @@ export default function Sniadania() {
         </h1>
       </header>
       <section className="menu-section container container--default">
-        <img className="menu-img" src="/img/menu/sniadania.jpg" alt="Menu" />
+        <img
+          className="menu-img"
+          src="/img/menu/sniadania-2025-09.jpg"
+          alt="Menu"
+        />
         <p className="menu-info">
-          Śniadania serwujemy od poniedziałku do piątku w godzinach 8-11.
+          Śniadania serwujemy od poniedziałku do soboty w godzinach 8-11.
         </p>
       </section>
     </>
