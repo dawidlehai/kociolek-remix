@@ -39,8 +39,7 @@ export default function Layout() {
         message="Ze względu na obsługę dużej liczby spotkań opłatkowych, Kociołek będzie zamknięty w dniach 9-13 grudnia."
       /> */}
       <p className="info">
-        W lipcu jesteśmy otwarci od 8 do 16. W sierpniu Kociołek będzie
-        nieczynny.
+        Teraz jesteśmy otwarci od poniedziałku aż do soboty w godzinach 8-17! :D
       </p>
       <Header
         navigationLinks={navigationLinks}

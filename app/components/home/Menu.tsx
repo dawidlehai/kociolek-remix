@@ -46,14 +46,14 @@ export default function Menu() {
       ></MenuItem> */}
       <MenuItem
         title="Dania obiadowe na miejscu"
-        desc="Sprawdź nasze dania dnia na bieżący tydzień. Przyjdź i zjedz wygodnie na miejscu od poniedziałku do piątku w godzinach 12-16."
+        desc="Sprawdź nasze dania dnia na bieżący tydzień. Przyjdź i zjedz wygodnie na miejscu od poniedziałku do soboty w godzinach 12-17."
         link="/dania-dnia"
         linkText="Sprawdź nasze menu"
         color="orange"
       ></MenuItem>
       <MenuItem
         title="Menu śniadaniowe na miejscu"
-        desc="Sprawdź nasze przepyszne i wychwalane menu śniadaniowe. Śniadania serwujemy od poniedziałku do piątku w godzinach 8-11."
+        desc="Sprawdź nasze przepyszne i wychwalane menu śniadaniowe. Śniadania serwujemy od poniedziałku do soboty w godzinach 8-11."
         link="/sniadania"
         linkText="Sprawdź menu śniadaniowe"
       ></MenuItem>

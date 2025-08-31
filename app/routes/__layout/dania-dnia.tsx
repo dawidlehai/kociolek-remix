@@ -29,15 +29,19 @@ export default function DaniaDnia() {
         /> */}
         <img
           className="menu-img"
-          src={`/img/menu/dania-dnia-4-lipiec-2025.jpg`}
+          src={`/img/menu/dania-dnia-1-2025-09.jpg`}
           alt="Menu"
         />
-        {/* <p className="menu-info">
+        <p className="menu-info">
           Ponadto codziennie serwujemy również stałe dania:
         </p>
-        <img className="menu-img" src="/img/menu/menu.jpg" alt="Menu" /> */}
+        <img
+          className="menu-img"
+          src="/img/menu/menu-stale-2025-09.jpg"
+          alt="Menu"
+        />
         <p className="menu-info">
-          Obiady serwujemy od poniedziałku do piątku w godzinach 12-16.
+          Obiady serwujemy od poniedziałku do soboty w godzinach 12-17.
         </p>
       </section>
     </>
