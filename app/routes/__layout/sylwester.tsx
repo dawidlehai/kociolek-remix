@@ -3,11 +3,9 @@ import type { LinksFunction, MetaFunction } from "@remix-run/node";
 import wielkanocStyles from "~/styles/menu-page.css";
 
 export const meta: MetaFunction = () => ({
-  title: "Kociołek – Menu na Sylwestra 2024/2025",
-  "og:url": "https://kociolekbydgoszcz.pl/swieta",
-  "og:title": "Kociołek – na Sylwestra 2024/2025",
-  "og:image": "https://kociolekbydgoszcz.pl/img/wielkanoc.png",
-  "og:image:alt": "Stół pełen pysznego jedzenia cateringowego",
+  title: "Kociołek – Menu na Sylwestra 2025/2026",
+  "og:url": "https://kociolekbydgoszcz.pl/sylwester",
+  "og:title": "Kociołek – Menu na Sylwestra 2025/2026",
 });
 
 export default function WielkanocPage() {
@@ -15,70 +13,73 @@ export default function WielkanocPage() {
     <>
       <header className="menu-header">
         <h1 className="menu-header__heading container container--default">
-          Menu na Sylwestra 2024/2025
+          Menu na Sylwestra 2025/2026
         </h1>
       </header>
       <section className="menu-section container container--default">
+        <p className="menu-info-top">
+          Wszystkie dania podawane w stole szwedzkim, dostępne przez całą noc.
+          <br />O północy lampka szampana dla wszystkich gości.
+          <br />
+          <strong>Alkohol oraz napoje gazowane we własnym zakresie.</strong>
+        </p>
+
         <h2 className="menu-heading-secondary">🍲 Bufet gorący</h2>
         <table className="menu-table">
-          <tr>
-            <td>Zupa grzybowa</td>
-          </tr>
           <tr>
             <td>Krem z białych warzyw</td>
           </tr>
           <tr>
-            <td>Udziec z kurczaka ze śliwką otoczony bekonem</td>
+            <td>Zupa gulaszowa</td>
           </tr>
           <tr>
-            <td>Kurczak w sosie mandarynkowo-brzoskwiniowym</td>
+            <td>Zraz wieprzowy</td>
+          </tr>
+          <tr>
+            <td>Kaczka w żurawinie</td>
           </tr>
           <tr>
             <td>Polędwiczki wieprzowe w sosie kurkowym</td>
           </tr>
           <tr>
-            <td>Grillowany filet z kurczaka w ziołach</td>
+            <td>Kurczak w cieście piwnym</td>
           </tr>
           <tr>
-            <td>Pieczone ziemniaki</td>
+            <td>Sandacz na borowikach</td>
           </tr>
           <tr>
-            <td>Smażony ryż z warzywami</td>
+            <td>Ziemniaki z wody</td>
           </tr>
           <tr>
-            <td>Warzywa gotowane na parze</td>
+            <td>Smażony makaron z warzywami</td>
           </tr>
           <tr>
-            <td>Bukiet surówek</td>
-          </tr>
-        </table>
-
-        <h2 className="menu-heading-secondary">🧁 Bufet słodki</h2>
-        <table className="menu-table">
-          <tr>
-            <td>Kawa, herbata</td>
+            <td>Kuleczki ziemniaczane</td>
           </tr>
           <tr>
-            <td>Sok jabłkowy, pomarańczowy, woda mineralna</td>
-          </tr>
-          <tr>
-            <td>Sernik tradycyjny</td>
-          </tr>
-          <tr>
-            <td>Jabłecznik</td>
-          </tr>
-          <tr>
-            <td>Kolorowe mini deserki</td>
+            <td>Zestaw surówek</td>
           </tr>
         </table>
 
         <h2 className="menu-heading-secondary">🥗 Bufet zimny</h2>
         <table className="menu-table">
           <tr>
-            <td>Szynka ze szparagami</td>
+            <td>Tatar wołowy na grzankach</td>
+          </tr>
+          <tr>
+            <td>Szparagi w szynce</td>
+          </tr>
+          <tr>
+            <td>Wytrawne babeczki z pastami</td>
+          </tr>
+          <tr>
+            <td>Śledzik w oleju</td>
           </tr>
           <tr>
             <td>Galaretki drobiowe</td>
+          </tr>
+          <tr>
+            <td>Ślimaki z ciasta francuskiego</td>
           </tr>
           <tr>
             <td>Sałatka grecka</td>
@@ -87,31 +88,56 @@ export default function WielkanocPage() {
             <td>Sałatka ryżowa z kurczakiem</td>
           </tr>
           <tr>
-            <td>Tatar wołowy na grzankach</td>
+            <td>Sałatka makaronowa z suszonymi pomidorami</td>
+          </tr>
+        </table>
+
+        <h2 className="menu-heading-secondary">🧁 Bufet słodki</h2>
+        <table className="menu-table">
+          <tr>
+            <td>Kolorowe mini deserki</td>
           </tr>
           <tr>
-            <td>Wytrawne babeczki z pastami</td>
+            <td>Sernik ambasador</td>
           </tr>
           <tr>
-            <td>Przekąski z tortilli</td>
+            <td>Szarlotka</td>
           </tr>
           <tr>
-            <td>Karkówka w sosie tatarskim</td>
+            <td>Kawa, herbata</td>
+          </tr>
+          <tr>
+            <td>Napój jabłkowy, pomarańczowy, woda mineralna</td>
           </tr>
         </table>
 
         <h2 className="menu-heading-secondary">🍖 Stół wiejski</h2>
         <table className="menu-table">
           <tr>
-            <td>Swojskie wędliny, smalec, ogórki, pasztety</td>
+            <td>Flaczki wołowe</td>
+          </tr>
+          <tr>
+            <td>Żurek</td>
+          </tr>
+          <tr>
+            <td>Chleb ze smalcem</td>
+          </tr>
+          <tr>
+            <td>Pasztety</td>
+          </tr>
+          <tr>
+            <td>Wędliny</td>
+          </tr>
+          <tr>
+            <td>Sery</td>
           </tr>
         </table>
 
-        <p className="menu-info">
-          Wszystkie dania podawane w stole szwedzkim, dostępne przez całą noc.
-          <br />O północy lampka szampana i tort. <br />
-          <strong>Alkohol oraz napoje gazowane we własnym zakresie.</strong>
-        </p>
+        <img
+          className="menu-img margin-bottom"
+          src="/img/plakat-sylwester-2025.jpg"
+          alt="Plakat Sylwester 2025/2026"
+        />
       </section>
     </>
   );

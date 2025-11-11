@@ -1,4 +1,4 @@
-import { Outlet, useOutletContext } from "@remix-run/react";
+import { Link, Outlet, useOutletContext } from "@remix-run/react";
 import type { RefObject } from "react";
 import { useRef } from "react";
 
@@ -39,7 +39,8 @@ export default function Layout() {
         message="Ze względu na obsługę dużej liczby spotkań opłatkowych, Kociołek będzie zamknięty w dniach 9-13 grudnia."
       /> */}
       <p className="info">
-        Teraz jesteśmy otwarci od poniedziałku aż do soboty w godzinach 8-17! :D
+        Bilety na Sylwestra 2025/2026 już dostępne! Sprawdź{" "}
+        <Link to="/sylwester">naszą ofertę</Link> i nie zwlekaj z rezerwacją!
       </p>
       <Header
         navigationLinks={navigationLinks}
