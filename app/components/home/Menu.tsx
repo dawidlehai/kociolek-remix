@@ -37,13 +37,13 @@ export default function Menu() {
         <span>Smaczne</span>
         <span>Zdrowe</span>
       </figure>
-      {/* <MenuItem
+      <MenuItem
         title="Oferta wigilijna"
         desc="Odetchnij w te święta i zamów nasze potrawy. Zamówienia przyjmujemy do 16 grudnia w godzinach 8:00-17:00."
         link="/wigilia"
         linkText="Sprawdź ofertę"
         color="marine"
-      ></MenuItem> */}
+      ></MenuItem>
       <MenuItem
         title="Dania obiadowe na miejscu"
         desc="Sprawdź nasze dania dnia na bieżący tydzień. Przyjdź i zjedz wygodnie na miejscu od poniedziałku do soboty w godzinach 12-17."

@@ -19,7 +19,7 @@ export default function Wigilia() {
       <section className="menu-section container container--default">
         <img
           className="wigilia-img"
-          src={`/img/oferta-swiateczna-2024.jpg`}
+          src={`/img/oferta-swiateczna-2025.jpg`}
           alt="Oferta świąteczna"
         />
       </section>
