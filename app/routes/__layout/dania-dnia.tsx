@@ -10,7 +10,7 @@ export const meta: MetaFunction = () => ({
 
 export default function DaniaDnia() {
   const currWeek = getWeek(new Date());
-  const menuNum = (currWeek % 3) + 1;
+  const menuNum = ((currWeek + 1) % 3) + 1;
   console.log("Aktualny tydzień", currWeek);
   console.log("Dania dnia na ten tydzień (do soboty włącznie)", menuNum);
 
@@ -24,7 +24,7 @@ export default function DaniaDnia() {
       <section className="menu-section container container--default">
         <img
           className="menu-img"
-          src={`/img/menu/dania-dnia-${menuNum}-2025-09.jpg`}
+          src={`/img/menu/dania-dnia-${menuNum}-2026-01.jpg`}
           alt="Menu"
         />
         {/* <img

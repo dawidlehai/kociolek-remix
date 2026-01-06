@@ -1,10 +1,9 @@
-import { Link, Outlet, useOutletContext } from "@remix-run/react";
+import { Outlet, useOutletContext } from "@remix-run/react";
 import type { RefObject } from "react";
 import { useRef } from "react";
 
 import Footer from "~/components/layout/Footer";
 import Header from "~/components/layout/Header";
-import TemporarilyClosedBanner from "~/components/utils/TemporarilyClosedBanner";
 import type { optionsType } from "~/hooks/useObserver";
 import useObserver from "~/hooks/useObserver";
 
@@ -34,7 +33,7 @@ export default function Layout() {
 
   return (
     <>
-      <TemporarilyClosedBanner
+      {/* <TemporarilyClosedBanner
         dateStart={new Date("2025-12-08")}
         dateEnd={new Date("2026-01-06")}
         message="Kociołek jest obecnie zamknięty. Zapraszamy ponownie 7 stycznia!"
@@ -42,7 +41,7 @@ export default function Layout() {
       <p className="info">
         Bilety na Sylwestra 2025/2026 już dostępne! Sprawdź{" "}
         <Link to="/sylwester">naszą ofertę</Link> i nie zwlekaj z rezerwacją!
-      </p>
+      </p> */}
       <Header
         navigationLinks={navigationLinks}
         sticky={!isVisible}
