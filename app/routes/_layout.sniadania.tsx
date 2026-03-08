@@ -1,12 +1,12 @@
 import type { LinksFunction, MetaFunction } from "@remix-run/node";
 
-import sniadaniaStyles from "~/styles/menu-page.css";
+import sniadaniaStyles from "~/styles/menu-page.css?url";
 
-export const meta: MetaFunction = () => ({
-  title: "Dania dnia – Śniadania",
-  "og:url": "https://kociolekbydgoszcz.pl/sniadania",
-  "og:title": "Dania dnia – Śniadania",
-});
+export const meta: MetaFunction = () => [
+  { title: "Dania dnia – Śniadania" },
+  { property: "og:url", content: "https://kociolekbydgoszcz.pl/sniadania" },
+  { property: "og:title", content: "Dania dnia – Śniadania" },
+];
 
 export default function Sniadania() {
   return (

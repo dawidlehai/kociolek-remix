@@ -28,8 +28,7 @@ export default function Header({ navigationLinks, sticky, headerRef }: Props) {
           <img
             src="/img/logo.svg"
             style={{ width: "100%", aspectRatio: "617/171" }}
-            // @ts-ignore: fetchpriority is a relatively new attribute
-            fetchpriority="high"
+            fetchPriority="high"
             alt="Logo Kociołek"
           />
         </Link>
