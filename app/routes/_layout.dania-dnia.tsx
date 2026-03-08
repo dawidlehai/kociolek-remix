@@ -1,12 +1,12 @@
 import type { LinksFunction, MetaFunction } from "@remix-run/node";
 import { getWeek } from "date-fns";
-import daniaDniaStyles from "~/styles/menu-page.css";
+import daniaDniaStyles from "~/styles/menu-page.css?url";
 
-export const meta: MetaFunction = () => ({
-  title: "Dania dnia – Kociołek",
-  "og:url": "https://kociolekbydgoszcz.pl/dania-dnia",
-  "og:title": "Dania dnia – Kociołek",
-});
+export const meta: MetaFunction = () => [
+  { title: "Dania dnia – Kociołek" },
+  { property: "og:url", content: "https://kociolekbydgoszcz.pl/dania-dnia" },
+  { property: "og:title", content: "Dania dnia – Kociołek" },
+];
 
 export default function DaniaDnia() {
   const currWeek = getWeek(new Date());

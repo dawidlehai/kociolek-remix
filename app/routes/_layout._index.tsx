@@ -1,6 +1,6 @@
 import type { LinksFunction } from "@remix-run/node";
 
-import { useObserveRef } from "~/routes/__layout";
+import { useObserveRef } from "~/routes/_layout";
 import Section from "~/components/layout/Section";
 import Hero from "~/components/home/Hero";
 import Offer from "~/components/home/Offer";
@@ -9,7 +9,7 @@ import Menu from "~/components/home/Menu";
 import About from "~/components/home/About";
 import Contact from "~/components/home/Contact";
 
-import homeStyles from "~/styles/home.css";
+import homeStyles from "~/styles/home.css?url";
 
 export default function Index() {
   const { observeRef } = useObserveRef();

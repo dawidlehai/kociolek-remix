@@ -1,5 +1,5 @@
 import React from "react";
-import { List, X } from "phosphor-react";
+import { List, X } from "@phosphor-icons/react/ssr";
 
 interface Props {
   ariaLabel: string;

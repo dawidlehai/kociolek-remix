@@ -6,7 +6,7 @@ import {
   Confetti,
   Gift,
   Martini,
-} from "phosphor-react";
+} from "@phosphor-icons/react/ssr";
 
 export default function Offer() {
   return (

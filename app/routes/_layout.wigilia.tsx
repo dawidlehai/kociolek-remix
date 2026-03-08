@@ -1,12 +1,12 @@
 import type { LinksFunction, MetaFunction } from "@remix-run/node";
 
-import daniaDniaStyles from "~/styles/menu-page.css";
+import daniaDniaStyles from "~/styles/menu-page.css?url";
 
-export const meta: MetaFunction = () => ({
-  title: "Oferta świąteczna – Kociołek",
-  "og:url": "https://kociolekbydgoszcz.pl/wigilia",
-  "og:title": "Oferta świąteczna – Kociołek",
-});
+export const meta: MetaFunction = () => [
+  { title: "Oferta świąteczna – Kociołek" },
+  { property: "og:url", content: "https://kociolekbydgoszcz.pl/wigilia" },
+  { property: "og:title", content: "Oferta świąteczna – Kociołek" },
+];
 
 export default function Wigilia() {
   return (

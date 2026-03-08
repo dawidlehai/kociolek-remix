@@ -1,9 +1,6 @@
-import type {
-  ErrorBoundaryComponent,
-  LinksFunction,
-  MetaFunction,
-} from "@remix-run/node";
+import type { LinksFunction, MetaFunction } from "@remix-run/node";
 import {
+  isRouteErrorResponse,
   Link,
   Links,
   LiveReload,
@@ -11,39 +8,44 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-  useCatch,
+  useRouteError,
 } from "@remix-run/react";
-import type { CatchBoundaryComponent } from "@remix-run/react/dist/routeModules";
 import type { ReactNode } from "react";
 
-import styles from "~/main.css";
+import styles from "~/main.css?url";
 import faviconLinks from "./faviconLinks";
 
-export const meta: MetaFunction = () => ({
-  charset: "utf-8",
-  title: "Kociołek – Bufet w Modraczku",
-  description:
-    "Kociołek to bufet i kawiarnia umieszczona na pierwszym piętrze Domu Kultury “Modraczek”, na Wyżynach w Bydgoszczy. Jest to wspaniałe miejsce spotkań, w którym możesz zorganizować dowolną imprezę okolicznościową wraz z profesjonalną obsługą cateringową, zjeść pyszne posiłki obiadowe, a także zamówić wybrane potrawy i dania garmażeryjne na wynos.",
-  viewport: "width=device-width,initial-scale=1",
-  "X-UA-Compatible": {
-    httpEquiv: "X-UA-Compatible",
-    content: "IE=edge",
+export const meta: MetaFunction = () => [
+  { charset: "utf-8" },
+  { title: "Kociołek – Bufet w Modraczku" },
+  {
+    name: "description",
+    content:
+      "Kociołek to bufet i kawiarnia umieszczona na pierwszym piętrze Domu Kultury „Modraczek”, na Wyżynach w Bydgoszczy. Jest to wspaniałe miejsce spotkań, w którym możesz zorganizować dowolną imprezę okolicznościową wraz z profesjonalną obsługą cateringową, zjeść pyszne posiłki obiadowe, a także zamówić wybrane potrawy i dania garmażeryjne na wynos.",
   },
-  ICBM: "53.11238011922019, 18.033702540507413",
-  "geo.position": "53.11238011922019;18.033702540507413",
-  "geo.region": "PL",
-  "geo.placename": "Bydgoszcz",
-  "og:url": "https://kociolekbydgoszcz.pl/",
-  "og:type": "website",
-  "og:title": "Kociołek – Bufet w Modraczku",
-  "og:image": "https://kociolekbydgoszcz.pl/img/kociolek.jpg",
-  "og:image:alt": "Stół pełen pysznego jedzenia cateringowego",
-  "og:description":
-    "Kociołek to bufet i kawiarnia umieszczona na pierwszym piętrze Domu Kultury “Modraczek”, na Wyżynach w Bydgoszczy. Jest to wspaniałe miejsce spotkań, w którym możesz zorganizować dowolną imprezę okolicznościową wraz z profesjonalną obsługą cateringową, zjeść pyszne posiłki obiadowe, a także zamówić wybrane potrawy i dania garmażeryjne na wynos.",
-  "og:site_name": "Kociołek – Agnieszka Tomaszewska-Le",
-  "og:locale": "pl_PL",
-  "google-site-verification": "8U9aVXXCdffqe80rSBnau1bCViZnAyMMF14lGSwVgH0",
-});
+  { name: "viewport", content: "width=device-width,initial-scale=1" },
+  { httpEquiv: "X-UA-Compatible", content: "IE=edge" },
+  { name: "ICBM", content: "53.11238011922019, 18.033702540507413" },
+  { name: "geo.position", content: "53.11238011922019;18.033702540507413" },
+  { name: "geo.region", content: "PL" },
+  { name: "geo.placename", content: "Bydgoszcz" },
+  { property: "og:url", content: "https://kociolekbydgoszcz.pl/" },
+  { property: "og:type", content: "website" },
+  { property: "og:title", content: "Kociołek – Bufet w Modraczku" },
+  { property: "og:image", content: "https://kociolekbydgoszcz.pl/img/kociolek.jpg" },
+  { property: "og:image:alt", content: "Stół pełen pysznego jedzenia cateringowego" },
+  {
+    property: "og:description",
+    content:
+      "Kociołek to bufet i kawiarnia umieszczona na pierwszym piętrze Domu Kultury „Modraczek”, na Wyżynach w Bydgoszczy. Jest to wspaniałe miejsce spotkań, w którym możesz zorganizować dowolną imprezę okolicznościową wraz z profesjonalną obsługą cateringową, zjeść pyszne posiłki obiadowe, a także zamówić wybrane potrawy i dania garmażeryjne na wynos.",
+  },
+  { property: "og:site_name", content: "Kociołek – Agnieszka Tomaszewska-Le" },
+  { property: "og:locale", content: "pl_PL" },
+  {
+    name: "google-site-verification",
+    content: "8U9aVXXCdffqe80rSBnau1bCViZnAyMMF14lGSwVgH0",
+  },
+];
 
 export const links: LinksFunction = () => [
   {
@@ -107,8 +109,7 @@ const ErrorPage = ({
       src="/img/logo.svg"
       style={{ width: "100%", aspectRatio: "617/171" }}
       className="error__logo"
-      // @ts-ignore: fetchpriority is a relatively new attribute
-      fetchpriority="high"
+      fetchPriority="high"
       alt="Logo Kociołek"
     />
     <h1 className="error__heading">{heading}</h1>
@@ -123,21 +124,29 @@ const ErrorPage = ({
   </main>
 );
 
-export const ErrorBoundary: ErrorBoundaryComponent = ({ error }) => {
+export function ErrorBoundary() {
+  const error = useRouteError();
+
+  if (isRouteErrorResponse(error)) {
+    const message = error.data?.message || "Podana strona nie istnieje.";
+    return (
+      <Root title={`${error.status} – Kociołek`}>
+        <ErrorPage heading={String(error.status)} message={message} />
+      </Root>
+    );
+  }
+
+  if (error instanceof Error) {
+    return (
+      <Root title={`${error.name} – Kociołek`}>
+        <ErrorPage heading={error.name} message={error.message} />
+      </Root>
+    );
+  }
+
   return (
-    <Root title={`${error.name} – Kociołek`}>
-      <ErrorPage heading={error.name} message={error.message} />
+    <Root title="Błąd – Kociołek">
+      <ErrorPage message="Wystąpił nieoczekiwany błąd." />
     </Root>
   );
-};
-
-export const CatchBoundary: CatchBoundaryComponent = () => {
-  const caughtResponse = useCatch();
-  const message = caughtResponse.data?.message || "Podana strona nie istnieje.";
-
-  return (
-    <Root title={`404 – Kociołek`}>
-      <ErrorPage message={message} />
-    </Root>
-  );
-};
+}
