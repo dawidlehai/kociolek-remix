@@ -1,5 +1,5 @@
 import { Link } from "@remix-run/react";
-import { ArrowDown } from "phosphor-react";
+import { ArrowDown } from "@phosphor-icons/react/ssr";
 
 export default function Hero() {
   return (

@@ -1,4 +1,4 @@
-import { FacebookLogo, GoogleLogo } from "phosphor-react";
+import { FacebookLogo, GoogleLogo } from "@phosphor-icons/react/ssr";
 
 export default function SocialMedia() {
   return (

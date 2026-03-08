@@ -1,5 +1,5 @@
 import { Link } from "@remix-run/react";
-import { ArrowUp } from "phosphor-react";
+import { ArrowUp } from "@phosphor-icons/react/ssr";
 
 import type { NavigationLinks } from "~/types/types";
 
