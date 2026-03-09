@@ -6,25 +6,20 @@
     "dev": "concurrently \"npm run sass\" \"remix vite:dev\"",
     "sass": "sass --watch --style=compressed app/main.scss:app/main.css app/styles/home.scss:app/styles/home.css app/styles/menu-page.scss:app/styles/menu-page.css",
     "sass:build": "sass --style=compressed app/main.scss:app/main.css app/styles/home.scss:app/styles/home.css app/styles/menu-page.scss:app/styles/menu-page.css",
-    "start": "cross-env NODE_ENV=production netlify dev",
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@netlify/functions": "^5.1.2",
-    "@netlify/remix-adapter": "^3.0.0",
     "@phosphor-icons/react": "^2.1.10",
-    "@remix-run/node": "^2.17.4",
     "@remix-run/react": "^2.17.4",
-    "cross-env": "^7.0.3",
     "date-fns": "^4.1.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-transition-group": "^4.4.5"
   },
   "devDependencies": {
-    "@netlify/remix-adapter": "^3.0.0",
     "@remix-run/dev": "^2.17.4",
     "@remix-run/eslint-config": "^2.17.4",
+    "@remix-run/node": "^2.17.4",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "@types/react-transition-group": "^4.4.5",
