@@ -41,8 +41,8 @@ export default function Contact() {
         </p>
         <p className="contact__company-mail">
           Adres e-mail:{" "}
-          <a href="mailto:kociolekbydgoszcz@gmail.com?subject=Wiadomość%20ze%20strony%20kociolekbydgoszcz.pl">
-            kociolekbydgoszcz@gmail.com
+          <a href="mailto:tomaszewskaa5@gmail.com?subject=Wiadomość%20ze%20strony%20kociolekbydgoszcz.pl">
+            tomaszewskaa5@gmail.com
           </a>
         </p>
       </address>
