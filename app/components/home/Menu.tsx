@@ -45,6 +45,13 @@ export default function Menu() {
         color="marine"
       ></MenuItem> */}
       <MenuItem
+        title="Oferta wielkanocna"
+        desc="Odetchnij w te święta i zamów nasze potrawy. Zamówienia przyjmujemy do 30 marca pod numerem tel. 721 473 077."
+        link="/wielkanoc"
+        linkText="Sprawdź ofertę"
+        color="marine"
+      ></MenuItem>
+      <MenuItem
         title="Dania obiadowe na miejscu"
         desc="Sprawdź nasze dania dnia na bieżący tydzień. Przyjdź i zjedz wygodnie na miejscu od poniedziałku do soboty w godzinach 12-17."
         link="/dania-dnia"

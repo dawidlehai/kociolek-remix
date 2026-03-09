@@ -1,4 +1,4 @@
-import { Outlet, useOutletContext } from "@remix-run/react";
+import { Link, Outlet, useOutletContext } from "@remix-run/react";
 import type { RefObject } from "react";
 import { useRef } from "react";
 
@@ -42,6 +42,9 @@ export default function Layout() {
         Bilety na Sylwestra 2025/2026 już dostępne! Sprawdź{" "}
         <Link to="/sylwester">naszą ofertę</Link> i nie zwlekaj z rezerwacją!
       </p> */}
+      <p className="info">
+        <Link to="/wielkanoc">Oferta wielkanocna już dostępna!</Link>
+      </p>
       <Header
         navigationLinks={navigationLinks}
         sticky={!isVisible}
