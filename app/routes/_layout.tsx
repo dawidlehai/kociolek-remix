@@ -1,9 +1,10 @@
-import { Link, Outlet, useOutletContext } from "@remix-run/react";
+import { Outlet, useOutletContext } from "@remix-run/react";
 import type { RefObject } from "react";
 import { useRef } from "react";
 
 import Footer from "~/components/layout/Footer";
 import Header from "~/components/layout/Header";
+import TemporarilyClosedBanner from "~/components/utils/TemporarilyClosedBanner";
 import type { optionsType } from "~/hooks/useObserver";
 import useObserver from "~/hooks/useObserver";
 
@@ -33,18 +34,19 @@ export default function Layout() {
 
   return (
     <>
-      {/* <TemporarilyClosedBanner
-        dateStart={new Date("2025-12-08")}
-        dateEnd={new Date("2026-01-06")}
-        message="Kociołek jest obecnie zamknięty. Zapraszamy ponownie 7 stycznia!"
+      <TemporarilyClosedBanner
+        dateStart={new Date("2026-03-29")}
+        dateEnd={new Date("2026-04-09")}
+        message="W dniach 01.04-09.04.2026 Kociołek będzie zamknięty. Możliwy będzie jedynie odbiór zamówień świątecznych."
       />
+      {/* 
       <p className="info">
         Bilety na Sylwestra 2025/2026 już dostępne! Sprawdź{" "}
         <Link to="/sylwester">naszą ofertę</Link> i nie zwlekaj z rezerwacją!
       </p> */}
-      <p className="info">
+      {/* <p className="info">
         <Link to="/wielkanoc">Oferta wielkanocna już dostępna!</Link>
-      </p>
+      </p> */}
       <Header
         navigationLinks={navigationLinks}
         sticky={!isVisible}
