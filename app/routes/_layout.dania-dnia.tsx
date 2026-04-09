@@ -30,21 +30,16 @@ export default function DaniaDnia() {
         </h1>
       </header>
       <section className="menu-section container container--default">
-        <p className="margin-top">
+        {/* <p className="margin-top">
           <strong>Uwaga!</strong> Kociołek będzie nieczynny w dniach
           01.04-09.04.2026 z powodu przerwy świątecznej. Możliwy będzie jedynie
           odbiór zamówień świątecznych.
-        </p>
+        </p> */}
         <img
           className="menu-img"
           src={`/img/menu/dania-dnia-${menuNum}-2026-01.jpg`}
           alt="Menu"
         />
-        {/* <img
-          className="menu-img"
-          src={`/img/menu/dania-dnia-1-2025-09.jpg`}
-          alt="Menu"
-        /> */}
         <p className="menu-info">
           Ponadto w dni otwarte serwujemy również stałe dania:
         </p>
